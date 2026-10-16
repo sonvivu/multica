@@ -351,6 +351,19 @@ func (b *opencodeBackend) Execute(ctx context.Context, prompt string, opts ExecO
 			// the process exit detail so a mid-step crash still surfaces the
 			// signal / exit code that killed it.
 			scanResult.errMsg = fmt.Sprintf("%s; opencode exited with error: %v", scanResult.errMsg, exitErr)
+		} else if exitErr == nil && scanResult.stepStillOpen && strings.TrimSpace(scanResult.output) != "" {
+			// Some OpenCode 2.x providers complete the answer but never emit
+			// step_finish in --format json mode (observed with
+			// @ai-sdk/openai-compatible gateways whose streams carry no
+			// finish/usage chunk): the CLI exits 0 with the full text on the
+			// stream, and only the terminal-signal guard marks the run
+			// failed. A clean exit plus produced text is positive evidence
+			// this run finished, so accept it instead of discarding a
+			// completed answer. Scoped to the openStep guard: continuation
+			// and void-step failures keep failing closed.
+			b.cfg.Logger.Warn("opencode: stream ended mid-step without step_finish, but the process exited cleanly with output; accepting the run as completed")
+			scanResult.status = "completed"
+			scanResult.errMsg = ""
 		} else if writeErr != nil && !scanResult.sawTerminalSignal {
 			// A failed prompt write is only benign once the run is PROVEN to have
 			// finished: OpenCode reads stdin to EOF before it does any work, so a
@@ -409,6 +422,7 @@ type eventResult struct {
 	sessionID        string
 	usage            TokenUsage // accumulated token usage across all steps
 	noTerminalSignal bool       // guard fired: the stream ended without evidence the run actually finished
+	stepStillOpen    bool       // the openStep guard fired specifically (stream ended mid-step), as opposed to the continuation / void-step guards
 	// sawTerminalSignal is positive evidence that the run actually finished: a
 	// step_finish closed the last step with no continuation pending and with
 	// something to show for it. It is NOT the negation of noTerminalSignal — a
@@ -551,12 +565,14 @@ func (b *opencodeBackend) processEvents(r io.Reader, ch chan<- Message) eventRes
 	// `opencode run` exited without emitting an error event. Fail closed on
 	// that structural evidence rather than reporting a false-green completion.
 	noTerminalSignal := false
+	stepStillOpen := false
 	if finalStatus == "completed" {
 		switch {
 		case openStep:
 			finalStatus = "failed"
 			finalError = "opencode stream ended without a terminal signal (step still open at EOF)"
 			noTerminalSignal = true
+			stepStillOpen = true
 		case awaitingContinuation:
 			finalStatus = "failed"
 			finalError = "opencode stream ended without a terminal signal (last step required a continuation that never started)"
@@ -575,6 +591,7 @@ func (b *opencodeBackend) processEvents(r io.Reader, ch chan<- Message) eventRes
 		sessionID:         sessionID,
 		usage:             usage,
 		noTerminalSignal:  noTerminalSignal,
+		stepStillOpen:     stepStillOpen,
 		sawTerminalSignal: sawStepFinish && !noTerminalSignal,
 	}
 }
