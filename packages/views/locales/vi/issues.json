@@ -744,12 +744,10 @@
     "trigger_wakeup": "Wakeup · {{condition}}",
     "trigger_image": "[Hình ảnh]",
     "summary_runs_other": "{{count}} lần chạy",
-    "latest": "Mới nhất",
     "open_timeline": "Mở dòng thời gian",
     "more_runs_other": "Hiện thêm {{count}}",
     "strip_aria": "Chi phí lũy kế theo thời gian — mở dòng thời gian của lần chạy",
     "strip_no_usage": "Chưa ghi nhận mức sử dụng",
-    "sparkline_now": "Hiện tại",
     "queued_count_other": "{{count}} đang chờ"
   },
   "runs_timeline": {
@@ -1486,9 +1484,6 @@
       "statuses_other": "{{count}} trạng thái",
       "handoffs_other": "{{count}} bước bàn giao",
       "no_handoffs": "Không có bàn giao",
-      "used_by_other": "Được {{count}} dự án dùng: {{names}}",
-      "used_by_default_other": "Được {{count}} dự án dùng: {{names}}, và các công việc không thuộc dự án",
-      "used_by_default_none": "Được các công việc không thuộc dự án dùng",
       "new_blank": "Quy trình trống",
       "from_template": "Từ mẫu có sẵn",
       "usage_default_other": "{{count}} dự án + công việc không dự án",

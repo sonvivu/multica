@@ -28,9 +28,6 @@
     "copy_identifier": "Sao chép định danh ({{identifier}})",
     "fold_all_comments": "Thu gọn tất cả bình luận",
     "unfold_all_comments": "Mở rộng tất cả bình luận",
-    "switch_to_light": "Chuyển sang giao diện sáng",
-    "switch_to_dark": "Chuyển sang giao diện tối",
-    "use_system_theme": "Dùng giao diện hệ thống",
     "new_autopilot": "Autopilot mới",
     "chat_with_agent": "Trò chuyện với một agent",
     "change_theme": "Đổi giao diện...",
@@ -51,7 +48,6 @@
   },
   "empty": {
     "no_results": "Không tìm thấy kết quả nào.",
-    "type_to_search": "Nhập để tìm kiếm công việc và dự án",
     "no_labels": "Không có nhãn",
     "type_to_find_issue": "Nhập để tìm công việc",
     "type_to_find_people": "Nhập để tìm người và agent"
