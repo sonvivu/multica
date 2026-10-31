@@ -492,10 +492,12 @@
     "section_load_failed_retry": "Không tải được. Thử lại",
     "quick_jump_label": "Điều hướng nhanh",
     "description_nav_label": "Mô tả công việc",
-    "sub_issues_nav_progress": "Đã hoàn thành {{done}}/{{total}}"
+    "sub_issues_nav_progress": "Đã hoàn thành {{done}}/{{total}}",
+    "restore_to_inbox_tooltip": "Khôi phục vào hộp thư đến"
   },
   "timeline": {
-    "loading": "Đang tải..."
+    "loading": "Đang tải...",
+    "jump_to_latest": "Nhảy tới mới nhất"
   },
   "activity": {
     "created": "đã tạo công việc này",
@@ -747,7 +749,8 @@
     "more_runs_other": "Hiện thêm {{count}}",
     "strip_aria": "Chi phí lũy kế theo thời gian — mở dòng thời gian của lần chạy",
     "strip_no_usage": "Chưa ghi nhận mức sử dụng",
-    "sparkline_now": "Hiện tại"
+    "sparkline_now": "Hiện tại",
+    "queued_count_other": "{{count}} đang chờ"
   },
   "runs_timeline": {
     "title": "Các lần chạy",
@@ -1487,7 +1490,12 @@
       "used_by_default_other": "Được {{count}} dự án dùng: {{names}}, và các công việc không thuộc dự án",
       "used_by_default_none": "Được các công việc không thuộc dự án dùng",
       "new_blank": "Quy trình trống",
-      "from_template": "Từ mẫu có sẵn"
+      "from_template": "Từ mẫu có sẵn",
+      "usage_default_other": "{{count}} dự án + công việc không dự án",
+      "usage_default_none": "Công việc không thuộc dự án",
+      "filter_projects": "Lọc dự án",
+      "no_matching_projects": "Không có dự án phù hợp",
+      "default_covers_no_project": "Cũng áp dụng cho công việc không thuộc dự án"
     },
     "editor": {
       "create_title": "Quy trình mới",
