@@ -172,7 +172,8 @@
       "french": "Français",
       "vietnamese": "Tiếng Việt",
       "sync_failed": "Đã lưu ngôn ngữ trên thiết bị này nhưng đồng bộ lên tài khoản thất bại. Các thiết bị khác có thể vẫn hiển thị ngôn ngữ trước đó.",
-      "chinese_traditional": "繁體中文"
+      "chinese_traditional": "繁體中文",
+      "spanish": "Español"
     },
     "timezone": {
       "title": "Múi giờ",

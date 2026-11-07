@@ -271,5 +271,13 @@
     "description": "Tìm một công việc để chuyển vào dự án này",
     "toast_success": "Đã chuyển {{identifier}} vào dự án",
     "toast_failed": "Không chuyển được công việc"
+  },
+  "copy_parent_fields": {
+    "trigger": "Sao chép trường của công việc cha",
+    "title": "Sao chép trường của công việc cha",
+    "description": "Từ {{identifier}}. Thay thế các giá trị nháp đã chọn một lần; thay đổi sau đó không đồng bộ.",
+    "apply": "Sao chép {{count}} trường",
+    "no_labels": "Không có nhãn",
+    "manual_only": "Nhãn, ngày bắt đầu và thuộc tính tùy chỉnh chỉ áp dụng khi tạo thủ công."
   }
 }

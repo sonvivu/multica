@@ -255,7 +255,10 @@
     "advanced_group_match_trailing": "trong số này",
     "advanced_group_hint": "Các điều kiện trong nhóm này được nối bằng “{{word}}”",
     "advanced_add_to_group": "Thêm vào nhóm",
-    "advanced_turn_into_group": "Chuyển thành nhóm"
+    "advanced_turn_into_group": "Chuyển thành nhóm",
+    "relation_subscribed": "Tôi theo dõi",
+    "section_read_state": "Trạng thái đọc",
+    "read_state_unread": "Chưa đọc"
   },
   "display": {
     "tooltip": "Cài đặt hiển thị",
@@ -556,8 +559,9 @@
     "quick_jump_label": "Điều hướng nhanh",
     "description_nav_label": "Mô tả công việc",
     "sub_issues_nav_progress": "Đã hoàn thành {{done}}/{{total}}",
-    "restore_to_inbox_tooltip": "Khôi phục vào hộp thư đến",
-    "not_found_title": "Không tìm thấy công việc"
+    "not_found_title": "Không tìm thấy công việc",
+    "load_failed": "Không tải được công việc.",
+    "load_retry": "Thử lại"
   },
   "timeline": {
     "loading": "Đang tải...",
@@ -755,7 +759,8 @@
   },
   "filtered_empty": {
     "title": "Không có công việc nào khớp với các bộ lọc này",
-    "clear_button": "Xóa bộ lọc"
+    "clear_button": "Xóa bộ lọc",
+    "unread_title": "Không có công việc chưa đọc"
   },
   "agent_live": {
     "is_working": "{{name}} đang làm việc",
@@ -900,8 +905,8 @@
     "delete_failed": "Xóa công việc thất bại",
     "delete_dialog_title_other": "Xóa {{count}} công việc?",
     "delete_dialog_desc_other": "Hành động này không thể hoàn tác. Nó sẽ xóa vĩnh viễn các công việc đã chọn và mọi dữ liệu liên quan.",
-    "delete_dialog_warning": "Bất kỳ thành viên nào của không gian làm việc cũng có thể xóa công việc.",
-    "cancel": "Hủy"
+    "cancel": "Hủy",
+    "delete_restricted": "Bạn chỉ xóa được công việc do bạn tạo hoặc do các agent của bạn tạo. Chủ sở hữu và quản trị viên không gian làm việc xóa được mọi công việc."
   },
   "card": {
     "update_failed": "Cập nhật công việc thất bại",
@@ -941,7 +946,8 @@
     "mark_unread": "Đánh dấu chưa đọc",
     "copy_identifier": "Sao chép định danh",
     "identifier_copied": "Đã sao chép {{identifier}}",
-    "stop_agent_run": "Dừng lần chạy của {{name}}"
+    "stop_agent_run": "Dừng lần chạy của {{name}}",
+    "restore_to_inbox": "Khôi phục về hộp thư"
   },
   "pickers": {
     "custom_property": {
@@ -1724,7 +1730,8 @@
     "builtin": {
       "my_issues": "Công việc của tôi",
       "my_agents": "Việc của các agent của tôi",
-      "all_issues": "Tất cả công việc"
+      "all_issues": "Tất cả công việc",
+      "unread": "Chưa đọc"
     },
     "untitled": "Chế độ xem chưa đặt tên",
     "copy_name": "{{name}} (bản sao)",
@@ -1781,6 +1788,16 @@
       "row_actions": "Hành động cho {{name}}",
       "empty_title": "Chưa có chế độ xem đã lưu nào",
       "empty_description": "Thiết lập bộ lọc và tùy chọn hiển thị trong danh sách công việc, rồi lưu chúng thành một chế độ xem."
-    }
+    },
+    "save_view": "Lưu chế độ xem",
+    "add_filter": "Thêm bộ lọc",
+    "setup_hint": "Chưa có điều kiện nào, nên chế độ xem này hiện mọi công việc"
+  },
+  "unread_filter_error": {
+    "title": "Không tải được các công việc chưa đọc của bạn"
+  },
+  "relation_filter_error": {
+    "title": "Không tải được bộ lọc \"Quan hệ với tôi\"",
+    "hint": "Các công việc lọc theo \"Tôi theo dõi\" hay \"Giao cho các agent của tôi\" chưa hiện được cho tới khi subscription và agent của bạn tải xong."
   }
 }

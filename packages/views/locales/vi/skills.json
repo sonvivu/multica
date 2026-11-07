@@ -20,10 +20,7 @@
         "description": "Skill do bạn tạo"
       }
     },
-    "empty": {
-      "title": "Chưa có skill nào",
-      "description": "Skill là cách làm việc có thể tái dùng cho các agent của bạn. Hãy tạo một skill, hoặc nhập từ một runtime."
-    },
+    "empty": {},
     "no_matches": {
       "title": "Không có kết quả phù hợp",
       "with_query": "Không có skill nào khớp với \"{{query}}\"{{filterSuffix}}.",
@@ -31,17 +28,14 @@
       "filter_only": "Không có skill nào khớp với bộ lọc này.",
       "try_different": " Hãy thử từ khóa khác."
     },
-    "intro_banner": {
-      "title": "Được chia sẻ với không gian làm việc của bạn.",
-      "body": "Ai cũng có thể tạo một skill, nhập từ URL hoặc thư mục trên máy, hoặc sao chép từ runtime cục bộ của mình — và mọi agent đều có thể sử dụng.",
-      "highlight": "Skill trên runtime cục bộ vẫn ở chế độ riêng tư cho đến khi bạn sao chép một skill vào đây."
-    },
+    "intro_banner": {},
     "list_error": {
       "title": "Không tải được danh sách skill",
       "fallback": "Đã xảy ra lỗi khi tải danh sách skill.",
       "retry": "Thử lại"
     },
-    "supporting_data_warning": "Một số dữ liệu của không gian làm việc không tải được. Thông tin người tạo, tên runtime hoặc quyền chỉnh sửa có thể hiển thị không đầy đủ."
+    "supporting_data_warning": "Một số dữ liệu của không gian làm việc không tải được. Thông tin người tạo, tên runtime hoặc quyền chỉnh sửa có thể hiển thị không đầy đủ.",
+    "search": "Tìm kiếm skill"
   },
   "table": {
     "name": "Tên",
@@ -207,15 +201,48 @@
       "files": "Tệp",
       "edit": "Sửa",
       "open": "Mở",
-      "add": "Thêm"
+      "add": "Thêm",
+      "history": "Lịch sử"
     },
     "menu": {
       "copy_link": "Sao chép liên kết",
       "link_copied": "Đã sao chép liên kết",
-      "delete": "Xóa skill"
+      "delete": "Xóa skill",
+      "version_history": "Lịch sử phiên bản"
     },
     "panel": {
-      "add_description": "Thêm mô tả"
+      "add_description": "Thêm mô tả",
+      "version": "Phiên bản",
+      "no_versions": "Chưa có phiên bản nào"
+    },
+    "toast_saved_version": "Đã lưu thành v{{version}}",
+    "toast_view_history": "Xem lịch sử",
+    "versions": {
+      "list_aria": "Các phiên bản skill",
+      "version_label": "v{{version}}",
+      "current": "Hiện tại",
+      "unknown_author": "Không rõ",
+      "empty": "Chưa có phiên bản nào. Lần thay đổi tiếp theo của skill này sẽ ghi nội dung hiện tại thành phiên bản đầu tiên.",
+      "load_failed": "Không tải được các phiên bản.",
+      "restore": "Khôi phục",
+      "toast_restored": "Đã khôi phục v{{version}}",
+      "toast_restore_failed": "Không khôi phục được phiên bản",
+      "source": {
+        "baseline": "Nội dung trước đó",
+        "create": "Đã tạo",
+        "update": "Đã sửa",
+        "import": "Đã nhập",
+        "refresh": "Đã cập nhật từ nguồn",
+        "restore": "Đã khôi phục từ v{{version}}"
+      },
+      "dialog": {
+        "title": "Khôi phục v{{version}}?",
+        "description": "Nội dung của v{{version}} sẽ thành một phiên bản mới. Agent dùng nó từ lần chạy tiếp theo. Các phiên bản mới hơn vẫn còn trong lịch sử.",
+        "unsaved_warning": "Các thay đổi chưa lưu của bạn sẽ bị hủy.",
+        "cancel": "Hủy",
+        "confirm": "Khôi phục",
+        "restoring": "Đang khôi phục..."
+      }
     }
   },
   "create": {
@@ -357,5 +384,34 @@
     "markdown_placeholder": "Viết nội dung markdown...",
     "raw_placeholder": "Nội dung tệp...",
     "raw_aria": "Nội dung văn bản thuần của {{path}}"
+  },
+  "intro": {
+    "title": "Biến cách đội bạn làm việc thành skill",
+    "description": "Skill là tập hợp hướng dẫn tái dùng được (SKILL.md). Thêm vào không gian làm việc một lần, giao cho agent, và agent làm theo.",
+    "slides": {
+      "methods": {
+        "title": "Bốn cách để thêm một skill",
+        "description": "Bắt đầu từ SKILL.md trống, hoặc mang skill có sẵn từ thư mục local, URL, hay runtime."
+      },
+      "assign": {
+        "title": "Giao cho agent",
+        "description": "Một skill phục vụ được nhiều agent. Sửa ở một chỗ, mọi agent dùng nó đều nhận thay đổi."
+      },
+      "share": {
+        "title": "Chia sẻ trong không gian làm việc",
+        "description": "Skill trên runtime local vẫn riêng tư cho tới khi bạn copy nó lên đây. Sau đó, agent nào cũng dùng được."
+      }
+    },
+    "art": {
+      "skill_summary": "Chạy test trước, rồi kiểm tra accessibility và hiệu năng.",
+      "add_to_agent": "Thêm vào agent",
+      "local_skills": "Skill local",
+      "private": "Riêng tư",
+      "workspace_shared": "Không gian làm việc",
+      "all_agents": "Agent nào cũng dùng được",
+      "role_reviewer": "Reviewer",
+      "role_fullstack": "Full stack",
+      "copy_to_workspace": "Sao chép vào không gian làm việc"
+    }
   }
 }

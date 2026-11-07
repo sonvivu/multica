@@ -1,7 +1,6 @@
 {
   "page": {
     "new_autopilot": "Autopilot mới",
-    "start_blank": "Bắt đầu từ đầu",
     "table": {
       "name": "Tên",
       "agent": "Agent",
@@ -15,10 +14,7 @@
       "created": "Ngày tạo"
     },
     "last_run_empty": "--",
-    "empty": {
-      "title": "Chưa có autopilot nào",
-      "hint": "Lên lịch công việc định kỳ cho các agent AI của bạn. Chọn một mẫu hoặc bắt đầu từ đầu."
-    },
+    "empty": {},
     "no_matches": "Không có autopilot nào khớp",
     "retry": "Thử lại"
   },
@@ -486,7 +482,6 @@
     "select_page": "Chọn tất cả wakeup đang bật",
     "load_error": "Không tải được các lần đánh thức",
     "loading": "Đang tải các lần đánh thức…",
-    "empty": "Chưa có quy tắc đánh thức nào",
     "disable_selected": "Tắt mục đã chọn",
     "confirm_title": "Tắt {{count}} lần đánh thức?",
     "confirm_body": "Các lần đánh thức trong tương lai sẽ dừng. Các lần chạy vẫn đang chờ và chưa được giao cho agent sẽ bị rút lại. Các lần chạy đã giao sẽ tiếp tục; hãy dừng chúng từ nhật ký thực thi.",
@@ -523,6 +518,36 @@
     "create": "Lần đánh thức mới",
     "create_pick_issue": "Chọn công việc để thêm lần đánh thức",
     "create_pick_issue_description": "Lần đánh thức thuộc về công việc này và kết thúc cùng với nó.",
-    "empty_description": "Lịch trình, chờ PR và chờ trả lời mà các agent đặt trên công việc sẽ hiện ở đây."
+    "intro": {
+      "title": "Đưa agent quay lại đúng lúc",
+      "description": "Wakeup sống trên công việc: khi PR được merge, có người trả lời, hay tới giờ hẹn, agent quay lại nhận việc. Khi công việc kết thúc, wakeup của nó cũng dừng.",
+      "slides": {
+        "event": {
+          "title": "Chờ điều gì đó xảy ra",
+          "description": "Không cần để agent chạy mãi trong lúc chờ. Khi điều kiện đạt, Multica đánh thức nó dậy."
+        },
+        "time": {
+          "title": "Hoặc chọn một thời điểm",
+          "description": "Wakeup một lần hợp với kiểu \"kiểm tra lại vào chiều mai\"; wakeup lặp lại hợp với kiểm tra hàng ngày."
+        },
+        "ends": {
+          "title": "Dừng khi công việc kết thúc",
+          "description": "Wakeup thuộc về công việc của nó. Khi công việc xong hay bị hủy, chúng tắt đi, không còn rule lạ nào sót lại."
+        }
+      },
+      "art": {
+        "issue_inbox": "Trạng thái trống cho nhóm hộp thư",
+        "issue_board": "Cột bảng co giãn được",
+        "issue_paste": "Dán ảnh vào bình luận",
+        "reply": "\"PR đã merge. Đang cập nhật docs và đóng công việc.\"",
+        "event_examples": "PR đã merge, bình luận mới"
+      }
+    }
+  },
+  "intro": {
+    "label": "Autopilot",
+    "title": "Để agent tự bắt đầu công việc",
+    "description": "Đặt lịch hoặc webhook. Mỗi lần kích hoạt, Multica tạo một công việc cho agent, hoặc chạy agent trực tiếp. Chọn mẫu rồi chỉnh theo ý.",
+    "templates": "Bắt đầu từ mẫu"
   }
 }

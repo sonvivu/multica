@@ -2,7 +2,6 @@
   "page": {
     "title": "Dự án",
     "new_project": "Dự án mới",
-    "empty": "Chưa có dự án nào",
     "view_compact": "Gọn",
     "view_comfortable": "Thoải mái",
     "no_search_results": "Không có kết quả nào khớp với tìm kiếm của bạn",
@@ -15,8 +14,7 @@
     "no_matches": "Không có dự án nào khớp",
     "scope_all": "Tất cả dự án",
     "scope_active": "Dự án đang mở",
-    "scope_closed": "Dự án đã đóng",
-    "empty_description": "Gom các công việc liên quan thành một dự án để theo dõi tiến độ và người phụ trách."
+    "scope_closed": "Dự án đã đóng"
   },
   "table": {
     "name": "Tên",
@@ -158,7 +156,8 @@
     "title": "Xóa dự án",
     "description": "Thao tác này sẽ xóa dự án. Các công việc sẽ không bị xóa nhưng sẽ bị gỡ liên kết.",
     "confirm": "Xóa",
-    "cancel": "Hủy"
+    "cancel": "Hủy",
+    "offline_error": "Bạn đang ngoại tuyến. Kết nối lại rồi thử xóa lại."
   },
   "picker": {
     "no_project": "Không có dự án",
@@ -174,5 +173,36 @@
     "section_priority": "Mức ưu tiên",
     "section_lead": "Phụ trách",
     "view": "Chế độ xem"
+  },
+  "intro": {
+    "title": "Chia việc lớn thành các dự án",
+    "description": "Một dự án gom các công việc liên quan lại để theo dõi cùng nhau. Mô tả và các repo liên kết của nó đi kèm làm ngữ cảnh trong mọi lần chạy của agent.",
+    "slides": {
+      "progress": {
+        "title": "Nhìn tiến độ trong nháy mắt",
+        "description": "Trạng thái, người phụ trách, ngày mục tiêu và mức hoàn thành nằm trên một thẻ, không cần mở từng công việc."
+      },
+      "context": {
+        "title": "Ngữ cảnh đi theo mọi lần chạy",
+        "description": "Viết mô tả và liên kết repo một lần. Mọi lần chạy trên các công việc của dự án đều nhận được chúng."
+      },
+      "sidebar": {
+        "title": "Ghim lên thanh bên",
+        "description": "Ghim các dự án dùng nhiều nhất lên thanh bên, và mở rộng một dự án để xem các công việc của nó."
+      }
+    },
+    "art": {
+      "project_website": "Thiết kế lại website",
+      "project_mobile": "Mobile 1.0",
+      "project_onboarding": "Onboarding",
+      "context_label": "Mô tả dự án",
+      "context_body": "Trang marketing mới trên Next.js và Tailwind. Nội dung theo docs/brand, mọi trang đều hỗ trợ dark mode.",
+      "run_started": "đã bắt đầu chạy",
+      "context_loaded": "Đã tải ngữ cảnh dự án và 2 repository",
+      "issue_count": "{{done}} / {{total}} công việc",
+      "issue_hero": "Làm động hero của trang chủ",
+      "issue_pricing": "Bảng so sánh giá",
+      "issue_blog": "Phân trang danh sách blog"
+    }
   }
 }

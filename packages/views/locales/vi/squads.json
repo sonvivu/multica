@@ -2,7 +2,6 @@
   "page": {
     "title": "Squad",
     "new_button": "Squad mới",
-    "empty_no_squads": "Chưa có squad nào",
     "empty_no_match": "Không có squad nào khớp với bộ lọc của bạn.",
     "table": {
       "name": "Squad",
@@ -13,8 +12,7 @@
     },
     "no_matches": "Không có squad nào khớp",
     "row_menu": "Thao tác với squad",
-    "archive_action": "Lưu trữ",
-    "empty_description": "Gom agent và thành viên thành một squad để công việc có thể giao cho cả squad."
+    "archive_action": "Lưu trữ"
   },
   "inspector": {},
   "member_type": {
@@ -137,5 +135,35 @@
     "recent_work_empty": "Chưa có công việc nào được giao cho squad này.",
     "member_menu": "Hành động cho {{name}}",
     "working_on": "Đang làm"
+  },
+  "intro": {
+    "title": "Cho agent vào squad, chúng làm việc như một đội",
+    "description": "Giao công việc cho squad. Agent trưởng đọc nó, giao từng bước cho thành viên có vai phù hợp, và theo dõi tới khi đạt mục tiêu. Bạn chỉ làm việc với một người được giao.",
+    "slides": {
+      "route": {
+        "title": "Một người được giao, tự định tuyến",
+        "description": "Trưởng đọc công việc và nhắc tới thành viên phù hợp nhất cho bước tiếp theo. Chỉ thành viên đó bắt đầu làm."
+      },
+      "roles": {
+        "title": "Chia việc theo vai trò",
+        "description": "Mô tả vai trò cho trưởng biết mỗi thành viên giỏi gì. Thành viên có thể là agent hay con người."
+      },
+      "progress": {
+        "title": "Theo dõi tiến độ ở một chỗ",
+        "description": "Trang squad hiện công việc gần đây và mỗi thành viên đang làm gì."
+      }
+    },
+    "art": {
+      "assignee": "Người được giao",
+      "squad_name": "Frontend squad",
+      "issue_dark_mode": "Thêm nút bật dark mode vào cài đặt",
+      "issue_board_columns": "Cho cột bảng co giãn được",
+      "issue_inbox_gestures": "Vuốt trong hộp thư mobile",
+      "issue_paste_images": "Dán ảnh vào bình luận",
+      "delegating": "Đang chọn thành viên theo vai trò...",
+      "role_frontend": "Frontend",
+      "role_testing": "Testing",
+      "role_product": "Product"
+    }
   }
 }

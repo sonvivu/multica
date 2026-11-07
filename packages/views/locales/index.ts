@@ -392,6 +392,7 @@ export const RESOURCES: Record<SupportedLocale, LocaleResources> = {
     ui: esUi,
     squads: esSquads,
     billing: esBilling,
+  },
   vi: {
     common: viCommon,
     auth: viAuth,

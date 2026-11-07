@@ -45,8 +45,6 @@
     "title": "Agent đã lưu trữ"
   },
   "empty": {
-    "title": "Chưa có agent nào",
-    "description": "Một agent nhận các công việc được giao cho nó và làm lần lượt trên runtime của bạn.",
     "setup": {
       "label": "Các bước thiết lập",
       "runtime": "Kết nối một runtime",
@@ -1041,5 +1039,29 @@
     "runs_7d": "Lần chạy (7 ngày)",
     "edit_access_aria": "Quyền truy cập: {{value}}. Đổi quyền truy cập",
     "all_settings": "Tất cả cài đặt"
+  },
+  "intro": {
+    "title": "Thuê đồng đội AI đầu tiên của bạn",
+    "description": "Agent nhận công việc như đồng đội: làm trên runtime của bạn bằng các công cụ như Claude Code và Codex, rồi trả kết quả trong phần bình luận.",
+    "slides": {
+      "describe": {
+        "title": "Nói nó làm gì trong một câu",
+        "description": "Mô tả công việc, chọn runtime và model, rồi tạo nó. Đổi hướng dẫn hay thêm skill bất cứ lúc nào."
+      },
+      "assign": {
+        "title": "Giao việc cho nó như đồng đội",
+        "description": "Chọn nó làm người được giao trên bất kỳ công việc nào. Nó tự bắt đầu, không cần trông chừng."
+      },
+      "deliver": {
+        "title": "Xem nó làm việc, nhận kết quả trong bình luận",
+        "description": "Từng bước đều hiện rõ trong lúc chạy. Xong việc, nó đăng kết quả và PR lên công việc."
+      }
+    },
+    "art": {
+      "prompt": "Review các PR frontend về accessibility và hiệu năng, rồi đăng phát hiện dưới dạng bình luận PR.",
+      "issue_title": "Bố cục trang giá vỡ trên mobile",
+      "comment": "Đã sửa: thẻ giá xếp thành một cột dưới 375px. PR đã mở và test đã pass.",
+      "step_read": "Đọc {{file}}"
+    }
   }
 }

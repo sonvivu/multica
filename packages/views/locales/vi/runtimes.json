@@ -652,5 +652,29 @@
       "cancel": "Hủy",
       "done": "Đã ngắt kết nối Qoder"
     }
+  },
+  "intro": {
+    "title": "Cho agent của bạn một máy tính để làm việc",
+    "description": "Runtime là nơi agent thực sự chạy việc: máy tính của bạn, một server, hay dịch vụ cloud.",
+    "slides": {
+      "local": {
+        "title": "Máy này tự kết nối",
+        "description": "Tải app desktop và đăng nhập. Claude Code, Codex và các CLI khác trên máy này tự hiện ra."
+      },
+      "remote": {
+        "title": "Máy khác, hai lệnh",
+        "description": "Cài CLI trên một server hay máy khác, rồi chạy multica setup để kết nối."
+      },
+      "cloud": {
+        "title": "Hoặc dùng cloud node",
+        "description": "Không muốn tự quản máy? Tạo một cloud node do Multica host."
+      }
+    },
+    "art": {
+      "this_computer": "Máy này · Desktop",
+      "detected": "Harness đã phát hiện",
+      "run_there": "Chạy trên máy đó",
+      "connected": "{{name}} đã kết nối tới Multica"
+    }
   }
 }
