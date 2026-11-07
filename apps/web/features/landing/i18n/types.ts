@@ -17,6 +17,9 @@ export const localeLabels: Record<Locale, string> = {
   // The landing dictionary has no French variant yet, so `locales` above still
   // offers four languages; this label only satisfies the Record type.
   fr: "FR",
+  // Same for Spanish: app UI is translated, the marketing dictionary is not
+  // (yet), so the label only satisfies the Record type.
+  es: "ES",
   // Same for Vietnamese: no landing dictionary variant yet, so this label
   // only satisfies the Record type.
   vi: "VI",
