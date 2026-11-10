@@ -148,6 +148,8 @@
   "run": {
     "issue_linked": "Đã liên kết công việc",
     "view_log": "Xem nhật ký thực thi",
+    "stop": "Dừng lượt chạy",
+    "stop_failed": "Không thể dừng lượt chạy.",
     "skipped_group": {
       "label": "Đã bỏ qua",
       "summary": "{{count}} lần chạy bị bỏ qua"

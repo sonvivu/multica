@@ -136,14 +136,8 @@
     "system": "Hệ thống"
   },
   "delegate": {
-    "heading": "Giao cho agent",
-    "create_and_assign": "Công việc mới và giao cho {{name}}",
-    "squad": "Squad",
-    "context_aria": "Tạo kèm",
-    "parent": "Thuộc {{identifier}}",
-    "pick_crumb": "Chọn",
-    "pick_another": "Giao cho agent hoặc squad khác...",
-    "detected": "Hướng dẫn"
+    "row": "Giao cho agent: “{{prompt}}”",
+    "hint": "Tạo nhanh"
   },
   "best": {
     "assign": "Giao {{subject}} cho {{name}}",
@@ -162,8 +156,6 @@
     "navigate": "Điều hướng",
     "select": "Chọn",
     "open_in_new_tab": "Mở trong tab mới",
-    "delegate": "Tạo và giao cho {{name}}",
-    "search_instead": "Tìm theo từ khóa",
     "back": "Quay lại",
     "prefix_commands": "Lệnh",
     "prefix_issues": "Công việc",

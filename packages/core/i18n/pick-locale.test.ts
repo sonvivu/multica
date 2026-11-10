@@ -24,6 +24,7 @@ describe("matchLocale", () => {
     expect(matchLocale(["fr"])).toBe("fr");
     expect(matchLocale(["es"])).toBe("es");
     expect(matchLocale(["ru"])).toBe("ru");
+    expect(matchLocale(["vi"])).toBe("vi");
   });
 
   it("collapses region-tagged BCP-47 to the supported base", () => {

@@ -157,23 +157,18 @@
     "toast_saved": "Đã lưu thay đổi"
   },
   "preferences": {
-    "theme": {
-      "title": "Chủ đề",
-      "light": "Sáng",
-      "dark": "Tối",
-      "system": "Hệ thống"
-    },
     "language": {
       "title": "Ngôn ngữ",
       "english": "English",
       "chinese": "简体中文",
+      "chinese_traditional": "繁體中文",
       "korean": "한국어",
       "japanese": "日本語",
       "french": "Français",
+      "spanish": "Español",
+      "russian": "Русский",
       "vietnamese": "Tiếng Việt",
-      "sync_failed": "Đã lưu ngôn ngữ trên thiết bị này nhưng đồng bộ lên tài khoản thất bại. Các thiết bị khác có thể vẫn hiển thị ngôn ngữ trước đó.",
-      "chinese_traditional": "繁體中文",
-      "spanish": "Español"
+      "sync_failed": "Đã lưu ngôn ngữ trên thiết bị này nhưng đồng bộ lên tài khoản thất bại. Các thiết bị khác có thể vẫn hiển thị ngôn ngữ trước đó."
     },
     "timezone": {
       "title": "Múi giờ",
@@ -194,13 +189,111 @@
     },
     "comments_title": "Bình luận & trò chuyện",
     "region_title": "Ngôn ngữ & khu vực",
-    "appearance_title": "Giao diện",
     "issue_fields_title": "Các trường hiển thị khi tạo công việc",
     "issue_fields": {
       "field": "Trường",
       "quick": "Tạo bằng agent",
       "manual": "Tạo thủ công",
       "unsupported": "Không khả dụng khi tạo bằng agent"
+    }
+  },
+  "appearance": {
+    "reset": "Đặt lại về mặc định",
+    "color": {
+      "title": "Màu sắc"
+    },
+    "mode": {
+      "title": "Chế độ",
+      "light": "Sáng",
+      "dark": "Tối",
+      "system": "Hệ thống"
+    },
+    "theme": {
+      "title": "Chủ đề",
+      "description": "Màu sắc, đường viền, bóng đổ và góc bo khắp ứng dụng.",
+      "default": "Mặc định",
+      "pop": "Pop"
+    },
+    "theme_options": {
+      "title": "Tùy chọn chủ đề",
+      "description": "Do {{name}} cung cấp.",
+      "reset": "Đặt lại tùy chọn"
+    },
+    "ui_text": {
+      "title": "Chữ giao diện",
+      "description": "Menu, nút bấm, danh sách, thanh bên và tiêu đề."
+    },
+    "latin_font": {
+      "title": "Phông chữ Latinh"
+    },
+    "ui_font": {
+      "inter": "Mặc định",
+      "system": "Hệ thống",
+      "serif": "Serif",
+      "mono": "Monospace"
+    },
+    "cjk_font": {
+      "title": "Phông chữ CJK",
+      "description": "Ký tự tiếng Trung; tiếng Nhật và tiếng Hàn dùng theo.",
+      "sans": "Sans",
+      "serif": "Serif",
+      "kai": "Kai",
+      "built_in": "Có sẵn",
+      "local": "Trên thiết bị này",
+      "load_local": "Hiện phông chữ trên thiết bị này…",
+      "loading": "Đang tìm phông chữ…",
+      "none": "Không có phông chữ chứa ký tự tiếng Trung trên thiết bị này.",
+      "load_failed": "Không đọc được phông chữ của thiết bị này.",
+      "sample": "永和九年 汉字"
+    },
+    "follow_ui": "Giống giao diện",
+    "theme_font": "Phông chữ của chủ đề",
+    "font_size": {
+      "title": "Cỡ chữ",
+      "description": "Chỉ đổi cỡ chữ. Khoảng cách và bố cục không đổi.",
+      "value": "{{size}} px",
+      "default": "{{size}} px · Mặc định"
+    },
+    "content_text": {
+      "title": "Chữ nội dung",
+      "description": "Mô tả công việc, bình luận, trò chuyện và tài liệu.",
+      "sample": "Mô tả và bình luận được đọc toàn văn nên có thể dùng phông chữ dành cho đọc, trong khi danh sách và nút bấm vẫn gọn."
+    },
+    "code_font": {
+      "title": "Phông chữ code",
+      "description": "Khối code, code nội dòng và nhật ký.",
+      "geist": "Mặc định",
+      "jetbrains": "Ligatures",
+      "system": "Monospace hệ thống"
+    },
+    "content_size": {
+      "title": "Cỡ chữ",
+      "description": "Chỉ chữ nội dung; giao diện giữ nguyên cỡ.",
+      "follow": "Giống giao diện ({{size}} px)"
+    },
+    "content_leading": {
+      "title": "Chiều cao dòng",
+      "compact": "Gọn",
+      "default": "Mặc định",
+      "relaxed": "Thoáng"
+    },
+    "layout": {
+      "title": "Bố cục và trợ năng"
+    },
+    "density": {
+      "title": "Mật độ",
+      "description": "Chiều cao hàng trong danh sách công việc và tìm kiếm.",
+      "compact": "Gọn",
+      "default": "Mặc định",
+      "comfortable": "Thoải mái"
+    },
+    "reduce_motion": {
+      "title": "Giảm chuyển động",
+      "description": "Tắt hiệu ứng động và chuyển cảnh. Khi tắt, cài đặt hệ thống của bạn vẫn được áp dụng."
+    },
+    "high_contrast": {
+      "title": "Tăng độ tương phản",
+      "description": "Chữ phụ đậm hơn và đường viền rõ hơn."
     }
   },
   "shortcuts": {
@@ -394,6 +487,7 @@
     "tabs": {
       "profile": "Hồ sơ",
       "preferences": "Tùy chọn",
+      "appearance": "Giao diện",
       "shortcuts": "Phím tắt",
       "issue": "Công việc",
       "notifications": "Thông báo",
@@ -950,35 +1044,6 @@
     "inbound_pending_hint": "Gửi một tin nhắn cho bot này trong Feishu/Lark để xác minh việc nhận tin. Nếu tin không tới, hãy kiểm tra chế độ kết nối dài, subscription im.message.receive_v1 và việc phát hành/phê duyệt ứng dụng. Các liên kết cũ có thể chưa có ghi nhận xác minh.",
     "inbound_verified_hint": "Liên kết này đã nhận được một tin nhắn hợp lệ. Điều này không xác nhận kết nối liên tục, việc thực thi agent hay trả lời."
   },
-  "composio": {
-    "page_description": "Kết nối các ứng dụng mà agent của bạn có thể dùng.",
-    "not_enabled_title": "Tích hợp Composio chưa được bật",
-    "not_enabled_description_prefix": "Đặt",
-    "not_enabled_description_suffix": "trên máy chủ để bật kết nối bộ công cụ Composio.",
-    "loading": "Đang tải bộ công cụ…",
-    "load_failed": "Không thể tải bộ công cụ Composio.",
-    "empty_title": "Chưa có ứng dụng nào kết nối được",
-    "empty_description": "Chưa có bộ công cụ nào có cấu hình xác thực được bật trong dự án Composio của bạn. Bật một bộ trong bảng điều khiển Composio để nó xuất hiện ở đây.",
-    "search_placeholder": "Tìm bộ công cụ…",
-    "connect": "Kết nối",
-    "connecting": "Đang kết nối…",
-    "connected": "Đã kết nối",
-    "disconnect": "Ngắt kết nối",
-    "disconnecting": "Đang ngắt kết nối…",
-    "connect_failed": "Không thể bắt đầu kết nối. Hãy thử lại.",
-    "disconnect_failed": "Không thể ngắt kết nối. Hãy thử lại.",
-    "toast_disconnected": "Đã ngắt kết nối",
-    "disconnect_confirm_title": "Ngắt kết nối ứng dụng này?",
-    "disconnect_confirm_description": "Tài khoản đã kết nối của bạn sẽ bị thu hồi tại Composio và agent của bạn sẽ mất quyền truy cập bộ công cụ này. Bạn có thể kết nối lại sau.",
-    "disconnect_confirm_cancel": "Hủy",
-    "connections_load_failed": "Không thể tải các kết nối hiện có của bạn, nên trạng thái đã kết nối có thể chưa đầy đủ.",
-    "toast_connected": "Đã kết nối",
-    "toast_connect_failed": "Không thể hoàn tất kết nối. Hãy thử lại.",
-    "last_used": "Lần dùng cuối {{when}}",
-    "last_used_never": "Chưa từng dùng",
-    "expired": "Token đã hết hạn",
-    "reconnect": "Kết nối lại"
-  },
   "slack": {
     "section_title": "Slack",
     "page_description": "Trò chuyện với agent trong Slack hoặc dùng /issue để tạo một công việc.",
@@ -1133,7 +1198,6 @@
     "byo_credentials_rejected": "WeCom đã từ chối Bot ID và bí mật này. Kiểm tra cả hai trên bảng điều khiển quản trị WeCom, và đảm bảo nó là bot thông minh đã bật kết nối dài.",
     "byo_credentials_unverifiable": "Không liên lạc được với WeCom để xác minh bot này. Thông tin xác thực của bạn chưa thay đổi — hãy thử lại sau ít phút.",
     "byo_install_failed": "Không thể lưu bot này — đã có lỗi ở phía chúng tôi. Thông tin xác thực của bạn chưa thay đổi; hãy thử lại, và liên hệ hỗ trợ nếu vẫn tiếp tục thất bại.",
-    "byo_failed_toast": "Không thể kết nối bot WeCom",
     "scan_option_title": "Tạo bot mới",
     "scan_option_description": "Quét mã QR trong WeCom để tạo một smart bot hoàn toàn mới và kết nối nó.",
     "byo_option_title": "Kết nối bot có sẵn",
@@ -1154,7 +1218,8 @@
     "scan_error_internal_error": "Đã xảy ra lỗi. Thử lại.",
     "scan_error_session_lost": "Phiên cài đặt này không còn khả dụng. Hãy lấy mã mới.",
     "scan_error_already_connected": "Agent này đã có bot WeCom được kết nối. Hãy ngắt kết nối trước.",
-    "scan_error_rate_limited": "Quá nhiều lần thử. Hãy chờ vài phút rồi thử lại."
+    "scan_error_rate_limited": "Quá nhiều lần thử. Hãy chờ vài phút rồi thử lại.",
+    "byo_failed_toast": "Không thể kết nối bot WeCom"
   },
   "telegram": {
     "section_title": "Telegram",
@@ -1467,7 +1532,188 @@
     "title": "Các cách cấp công cụ cho agent",
     "current": "Trang này",
     "mcp": "Được quản trị viên thêm và dùng chung trong không gian làm việc, rồi gán cho từng agent.",
-    "apps": "Được cấp quyền bằng tài khoản của chính bạn qua Composio và bật trên các agent bạn sở hữu.",
+    "apps": "Tài khoản nhóm hoặc cá nhân được kết nối qua Multica và thêm cho từng agent.",
     "plugins": "Các gói đã cài đặt có thể thêm công cụ, hook theo lịch và bộ nhớ lưu trữ, mỗi thứ với quyền riêng."
+  },
+  "connected_apps": {
+    "description": "Tài khoản mà agent của bạn dùng để truy cập ứng dụng bên ngoài. Các thao tác được phép sẽ chạy ngay.",
+    "loading": "Đang tải ứng dụng…",
+    "load_failed": "Không tải được ứng dụng.",
+    "team_title": "Tài khoản nhóm",
+    "team_description": "Tài khoản dùng chung thuộc về không gian làm việc, ví dụ hộp thư hỗ trợ hay GitHub của công ty. Quản trị viên kết nối chúng; agent được giao tài khoản nhóm sẽ hành động với tư cách tài khoản đó.",
+    "team_empty": "Chưa có tài khoản nhóm.",
+    "team_empty_member": "Chưa có tài khoản nhóm. Hãy nhờ quản trị viên không gian làm việc kết nối một tài khoản.",
+    "personal_title": "Tài khoản của tôi",
+    "personal_description": "Tài khoản của riêng bạn. Khi bạn kích hoạt một lượt chạy, agent dùng các tài khoản này cho những ứng dụng được đặt dùng tài khoản của người kích hoạt.",
+    "personal_empty": "Bạn chưa kết nối tài khoản nào.",
+    "connected_by": "Được kết nối bởi {{name}}",
+    "last_used": "Lần dùng cuối {{when}}",
+    "last_used_never": "Chưa từng dùng",
+    "used_by_other": "Được dùng bởi {{count}} agent",
+    "expired": "Cần kết nối lại",
+    "reconnect": "Kết nối lại",
+    "rules": "Quy tắc",
+    "activity": "Hoạt động",
+    "disconnect": "Ngắt kết nối",
+    "catalog_title": "Ứng dụng khả dụng",
+    "catalog_label": "Ứng dụng thành viên có thể thêm",
+    "catalog_description": "Ứng dụng tuyển chọn đi kèm quy tắc mặc định đã được kiểm duyệt. Tất cả ứng dụng sẽ thêm mọi thứ Composio có thể kết nối; thao tác mà Multica không phân loại được sẽ luôn hỏi trước. Danh sách tùy chỉnh chỉ cho phép những ứng dụng bạn chọn.",
+    "catalog_all": "Tất cả ứng dụng",
+    "catalog_curated": "Chỉ ứng dụng tuyển chọn",
+    "catalog_custom": "Danh sách tùy chỉnh",
+    "toast_connected": "Đã kết nối tài khoản",
+    "toast_connect_failed": "Không thể hoàn tất kết nối. Hãy thử lại.",
+    "toast_disconnected": "Đã ngắt kết nối",
+    "toast_failed": "Đã xảy ra lỗi. Hãy thử lại.",
+    "add": {
+      "search": "Tìm kiếm ứng dụng…",
+      "empty": "Không có ứng dụng nào khớp.",
+      "curated": "Tuyển chọn",
+      "recommended_team": "Thường là tài khoản nhóm",
+      "recommended_personal": "Thường là tài khoản cá nhân",
+      "connect_team": "Kết nối tài khoản nhóm",
+      "connect_personal": "Kết nối tài khoản của tôi",
+      "connecting": "Đang kết nối…",
+      "connected": "Đã kết nối",
+      "connect": "Kết nối",
+      "team_description": "Tài khoản dùng chung của không gian làm việc. Chọn agent nào được dùng tài khoản này trên trang Ứng dụng của từng agent.",
+      "personal_description": "Tài khoản của riêng bạn. Khi bạn kích hoạt một lượt chạy, các ứng dụng được đặt dùng tài khoản của người kích hoạt sẽ dùng tài khoản này."
+    },
+    "disconnect_team": {
+      "title": "Ngắt kết nối tài khoản nhóm {{app}}?",
+      "description": "Các agent đang dùng tài khoản nhóm sẽ mất quyền truy cập ngay lập tức.",
+      "agents": "Agent đang dùng tài khoản này",
+      "no_agents": "Không có agent nào dùng tài khoản này.",
+      "active_tasks": "Lượt chạy đang diễn ra: {{count}}",
+      "active_autopilots": "Autopilot đang hoạt động: {{count}}",
+      "pending": "Xác nhận sẽ bị hủy: {{count}}",
+      "cancel": "Hủy",
+      "confirm": "Ngắt kết nối"
+    },
+    "disconnect_personal": {
+      "title": "Ngắt kết nối tài khoản {{app}} của bạn?",
+      "description": "Các lượt chạy bạn kích hoạt sẽ không dùng được tài khoản này nữa. Bạn có thể kết nối lại sau.",
+      "cancel": "Hủy",
+      "confirm": "Ngắt kết nối"
+    },
+    "detail": {
+      "team_title": "{{app}} · tài khoản nhóm",
+      "personal_title": "{{app}} · tài khoản của tôi",
+      "rules_description": "Những gì agent được làm qua tài khoản này. Mức của agent chỉ có thể siết chặt thêm.",
+      "rules_read_only": "Chỉ quản trị viên không gian làm việc mới đổi được quy tắc của tài khoản nhóm.",
+      "default": "Mặc định: {{policy}}",
+      "activity_empty": "Chưa có lệnh gọi nào.",
+      "activity_failed": "Không tải được hoạt động."
+    },
+    "classes": {
+      "read": {
+        "label": "Đọc",
+        "description": "Tìm kiếm, liệt kê và lấy dữ liệu"
+      },
+      "write": {
+        "label": "Ghi",
+        "description": "Tạo và cập nhật nội dung"
+      },
+      "send": {
+        "label": "Gửi",
+        "description": "Gửi email hoặc tin nhắn, đăng bài, mời"
+      },
+      "delete": {
+        "label": "Xóa",
+        "description": "Xóa hoặc lưu trữ"
+      },
+      "share": {
+        "label": "Chia sẻ",
+        "description": "Đổi quyền hoặc chia sẻ ra ngoài"
+      }
+    },
+    "policies": {
+      "allow": "Cho phép",
+      "confirm": "Hỏi trước",
+      "block": "Chặn"
+    },
+    "outcomes": {
+      "ok": "Đã chạy",
+      "error": "Thất bại",
+      "blocked": "Bị chặn",
+      "pending": "Đang chờ",
+      "approved": "Đã duyệt",
+      "rejected": "Bị từ chối",
+      "rate_limited": "Bị giới hạn tần suất"
+    },
+    "scopes": {
+      "team": "Tài khoản nhóm",
+      "personal": "Tài khoản của người kích hoạt"
+    },
+    "levels": {
+      "read": "Chỉ đọc",
+      "confirm_writes": "Hỏi trước khi ghi",
+      "write": "Được ghi"
+    },
+    "request": {
+      "title_action": "{{agent}} muốn chạy {{tool}}",
+      "title_connect": "{{agent}} nhờ bạn kết nối {{app}}",
+      "pending_count_other": "{{count}} thao tác ứng dụng đang chờ xác nhận",
+      "waiting_for": "Đang chờ {{name}}",
+      "expires": "Hết hạn {{when}}",
+      "redacted": "Chỉ {{name}} mới xem được chi tiết.",
+      "arguments": "Tham số",
+      "edit": "Sửa",
+      "invalid_json": "Tham số phải là một đối tượng JSON.",
+      "approve": "Duyệt và chạy",
+      "approve_all": "Duyệt tất cả",
+      "reject": "Từ chối",
+      "reject_reason": "Lý do (không bắt buộc, agent sẽ thấy)",
+      "connect": "Kết nối {{app}}",
+      "connected_continue": "Tôi đã kết nối rồi",
+      "status": {
+        "approved": "Đã duyệt",
+        "rejected": "Bị từ chối",
+        "failed": "Thất bại",
+        "expired": "Hết hạn",
+        "cancelled": "Đã hủy"
+      },
+      "toast_approved": "Đã duyệt. Agent sẽ tiếp tục.",
+      "toast_rejected": "Đã từ chối. Agent sẽ thích ứng.",
+      "toast_failed": "Không ghi được quyết định của bạn.",
+      "not_connected": "Hãy kết nối tài khoản trước.",
+      "connected_resumed": "Đã kết nối {{app}}. Agent tiếp tục từ chỗ đã dừng.",
+      "rate_limited": "Tài khoản này đã chạm giới hạn số lệnh gọi mỗi phút. Hãy duyệt lại sau một phút.",
+      "rate_limited_some_other": "{{count}} yêu cầu đã chạm giới hạn mỗi phút. Hãy duyệt lại sau một phút.",
+      "withdrawn": "Bạn không dùng được agent này nữa nên yêu cầu đã bị rút lại."
+    },
+    "tools": {
+      "tab": "Công cụ",
+      "description": "Loại của một công cụ quyết định quy tắc nào áp dụng cho nó. Hãy sửa những công cụ mà loại tự động phân loại sai; thay đổi áp dụng cho mọi tài khoản của ứng dụng này trong không gian làm việc.",
+      "read_only": "Chỉ quản trị viên không gian làm việc mới đổi được cách phân loại công cụ.",
+      "search": "Tìm kiếm công cụ",
+      "empty": "Không có công cụ nào khớp.",
+      "auto": "Tự động ({{class}})",
+      "truncated": "Đang hiện {{shown}} trên {{total}}. Tìm kiếm để thu hẹp danh sách."
+    },
+    "custom": {
+      "title": "Danh sách ứng dụng tùy chỉnh",
+      "description": "Agent chỉ thấy những ứng dụng bạn chọn, và không ai có thể kết nối tài khoản cho ứng dụng khác.",
+      "selected_other": "Đã chọn {{count}} ứng dụng",
+      "cancel": "Hủy",
+      "save": "Lưu danh sách",
+      "saved": "Đã lưu danh sách ứng dụng",
+      "edit": "Sửa danh sách",
+      "row_label": "Ứng dụng được phép",
+      "row_description_other": "{{count}} ứng dụng được phép"
+    },
+    "saved_access": {
+      "account": "Các hạn chế thao tác đã lưu vẫn đang chặn tài khoản này.",
+      "agent": "Ứng dụng này vẫn chỉ có quyền đọc từ một thiết lập trước đây.",
+      "catalog": "Một danh sách ứng dụng đã lưu đang ẩn các ứng dụng khác.",
+      "allow_actions": "Cho phép mọi thao tác",
+      "open_catalog": "Hiện tất cả ứng dụng",
+      "account_confirm": "Các agent được giao tài khoản này sẽ có thể đọc, ghi, gửi, xóa và chia sẻ qua tài khoản đó. Các hạn chế thao tác đã lưu sẽ bị thay thế.",
+      "agent_confirm": "Agent này sẽ có thể đọc, ghi, gửi, xóa và chia sẻ qua ứng dụng này, trong phạm vi các thao tác được phép của tài khoản.",
+      "catalog_confirm": "Mọi ứng dụng có thể kết nối sẽ khả dụng cho không gian làm việc. Các kết nối và phân công agent hiện có vẫn giữ nguyên.",
+      "cancel": "Hủy",
+      "admin_required": "Quản trị viên không gian làm việc có thể khôi phục quyền truy cập.",
+      "account_link": "Tài khoản này có hạn chế thao tác đã lưu. Khôi phục quyền truy cập trong Ứng dụng đã kết nối."
+    }
   }
 }

@@ -91,6 +91,7 @@
     "this_machine": "Thiết bị này",
     "local_badge": "Cục bộ · máy này",
     "pending_custom_runtimes": "Runtime tùy chỉnh đang chờ",
+    "daemon_title": "Daemon",
     "busy_count_other": "{{count}} đang bận",
     "no_matches_title": "Không có máy nào",
     "no_matches_hint": "Không có máy nào khớp với tìm kiếm hoặc bộ lọc hiện tại.",
@@ -126,8 +127,7 @@
       "toast_saved": "Đã đổi tên máy",
       "toast_cleared": "Đã xóa tên máy",
       "toast_failed": "Không đổi tên được máy"
-    },
-    "daemon_title": "Daemon"
+    }
   },
   "health": {
     "online": {
@@ -158,9 +158,14 @@
     "fact_runtime": "Runtime",
     "fact_daemon_cli": "CLI của daemon",
     "fact_daemon_id": "ID của daemon",
+    "usage_title": "Mức sử dụng",
     "no_agents": "Chưa có agent nào được gắn với runtime này.",
     "diagnostics_cli": "CLI",
     "diagnostics_visibility": "Khả năng hiển thị",
+    "concurrency_title": "Đồng thời",
+    "concurrency_none": "Không giới hạn",
+    "concurrency_hint": "Số lần chạy tối đa cùng lúc trên mọi agent của runtime này ({{min}}–{{max}}). Để trống nếu không giới hạn.",
+    "toast_concurrency_failed": "Không cập nhật được giới hạn đồng thời",
     "visibility_label": {
       "private": "Riêng tư",
       "public": "Công khai",
@@ -243,12 +248,7 @@
     "toast_deleted": "Đã xóa runtime",
     "toast_delete_failed": "Không xóa được runtime",
     "running_chip_other": "· {{count}} đang chạy",
-    "queued_chip_other": "· {{count}} đang chờ",
-    "usage_title": "Mức sử dụng",
-    "concurrency_title": "Đồng thời",
-    "concurrency_none": "Không giới hạn",
-    "concurrency_hint": "Số lần chạy tối đa cùng lúc trên mọi agent của runtime này ({{min}}–{{max}}). Để trống nếu không giới hạn.",
-    "toast_concurrency_failed": "Không cập nhật được giới hạn đồng thời"
+    "queued_chip_other": "· {{count}} đang chờ"
   },
   "detail_page": {
     "not_found_title": "Không tìm thấy runtime",

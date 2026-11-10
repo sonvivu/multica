@@ -2,19 +2,20 @@
   "page": {
     "title": "Dự án",
     "new_project": "Dự án mới",
+    "scope_all": "Tất cả dự án",
+    "scope_active": "Dự án đang mở",
+    "scope_closed": "Dự án đã đóng",
     "view_compact": "Gọn",
     "view_comfortable": "Thoải mái",
     "no_search_results": "Không có kết quả nào khớp với tìm kiếm của bạn",
     "view_table": "Bảng",
     "view_cards": "Thẻ",
     "row_menu": "Thao tác với dự án",
+    "rename": "Đổi tên",
     "pin": "Ghim vào thanh bên",
     "unpin": "Bỏ ghim",
     "delete": "Xóa",
-    "no_matches": "Không có dự án nào khớp",
-    "scope_all": "Tất cả dự án",
-    "scope_active": "Dự án đang mở",
-    "scope_closed": "Dự án đã đóng"
+    "no_matches": "Không có dự án nào khớp"
   },
   "table": {
     "name": "Tên",
@@ -54,12 +55,15 @@
   },
   "detail": {
     "not_found": "Không tìm thấy dự án",
+    "not_found_description": "Có thể nó đã bị xóa hoặc bạn không có quyền truy cập.",
+    "back_to_list": "Tất cả dự án",
     "breadcrumb_fallback": "Dự án",
     "title_placeholder": "Tiêu đề dự án",
     "icon_tooltip": "Đổi biểu tượng",
     "pin_tooltip": "Ghim vào thanh bên",
     "unpin_tooltip": "Bỏ ghim khỏi thanh bên",
     "sidebar_tooltip": "Bật/tắt thanh bên phải",
+    "rename_action": "Đổi tên dự án",
     "copy_link": "Sao chép liên kết",
     "delete_action": "Xóa dự án",
     "section_properties": "Thuộc tính",
@@ -74,13 +78,11 @@
     "empty_issues_title": "Chưa có công việc nào trong dự án này",
     "empty_issues_hint": "Tạo một công việc, hoặc chuyển một công việc có sẵn vào đây.",
     "empty_issues_new_button": "Công việc mới",
+    "empty_issues_add_existing": "Thêm công việc có sẵn",
     "no_issues_yet": "Chưa có công việc nào",
     "toast_link_copied": "Đã sao chép liên kết",
     "toast_project_deleted": "Đã xóa dự án",
-    "toast_move_issue_failed": "Không di chuyển được công việc",
-    "not_found_description": "Có thể nó đã bị xóa hoặc bạn không có quyền truy cập.",
-    "back_to_list": "Tất cả dự án",
-    "empty_issues_add_existing": "Thêm công việc có sẵn"
+    "toast_move_issue_failed": "Không di chuyển được công việc"
   },
   "resources": {
     "section_header": "Tài nguyên",
@@ -153,11 +155,11 @@
     "ref_default_tooltip": "Chưa đặt nhánh — các task dùng nhánh mặc định của repo tại thời điểm đó."
   },
   "delete_dialog": {
+    "offline_error": "Bạn đang ngoại tuyến. Kết nối lại rồi thử xóa lại.",
     "title": "Xóa dự án",
     "description": "Thao tác này sẽ xóa dự án. Các công việc sẽ không bị xóa nhưng sẽ bị gỡ liên kết.",
     "confirm": "Xóa",
-    "cancel": "Hủy",
-    "offline_error": "Bạn đang ngoại tuyến. Kết nối lại rồi thử xóa lại."
+    "cancel": "Hủy"
   },
   "picker": {
     "no_project": "Không có dự án",
@@ -204,5 +206,26 @@
       "issue_pricing": "Bảng so sánh giá",
       "issue_blog": "Phân trang danh sách blog"
     }
+  },
+  "access": {
+    "label": "Quyền truy cập",
+    "title": "Quyền truy cập vào {{title}}",
+    "description": "Quy định ai có thể xem dự án này cùng các công việc, bình luận và tệp đính kèm của nó.",
+    "workspace": "Toàn bộ không gian làm việc",
+    "private": "Chỉ thành viên dự án",
+    "members_count": "Thành viên dự án · {{count}}",
+    "add": "Thêm thành viên không gian làm việc",
+    "search": "Tìm theo tên hoặc email...",
+    "no_members": "Không có thành viên nào khớp",
+    "no_selected": "Chưa có thành viên dự án",
+    "admin_notice": "Chủ sở hữu và quản trị viên không gian làm việc luôn có quyền truy cập.",
+    "you": "Bạn",
+    "remove": "Gỡ {{name}}",
+    "failed": "Không lưu được thay đổi quyền truy cập.",
+    "load_failed": "Không tải được thành viên dự án.",
+    "publish_title": "Cho phép không gian làm việc xem dự án này?",
+    "publish_description": "Mọi thành viên không gian làm việc sẽ xem được dự án này cùng các công việc, bình luận và tệp đính kèm của nó.",
+    "done": "Xong",
+    "retry": "Thử lại"
   }
 }

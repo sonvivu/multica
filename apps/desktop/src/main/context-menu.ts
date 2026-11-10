@@ -195,6 +195,12 @@ const labelsByLocale: Record<string, ContextMenuLabels> = {
     copyImage: "Копировать изображение",
     addToDictionary: "Добавить в словарь",
   },
+  vi: {
+    openLink: "Mở liên kết trong trình duyệt",
+    copyLinkAddress: "Sao chép địa chỉ liên kết",
+    copyImage: "Sao chép hình ảnh",
+    addToDictionary: "Thêm vào từ điển",
+  },
 };
 
 // pickLabels resolves the OS-preferred language to one of the locales we
