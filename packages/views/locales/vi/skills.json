@@ -90,9 +90,7 @@
     "section_labels": "Nhãn",
     "filter_search_placeholder": "Lọc...",
     "no_labels": "Chưa có nhãn nào",
-    "no_results": "Không có kết quả",
-    "manage_labels": "Quản lý nhãn...",
-    "manage_labels_title": "Nhãn skill"
+    "no_results": "Không có kết quả"
   },
   "detail": {
     "read_only": "Chỉ đọc",
@@ -243,15 +241,9 @@
     }
   },
   "create": {
-    "back": "Quay lại",
-    "back_aria": "Quay lại phần chọn cách tạo",
     "close": "Đóng",
     "close_aria": "Đóng",
     "method": {
-      "chooser": {
-        "title": "Skill mới",
-        "desc": "Chọn cách thêm skill vào không gian làm việc này."
-      },
       "manual": {
         "title": "Tạo thủ công",
         "desc": "Bắt đầu từ một tệp SKILL.md trống."

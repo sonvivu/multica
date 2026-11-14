@@ -55,7 +55,7 @@
   },
   "relation_filter_error": {
     "title": "Không tải được bộ lọc \"Quan hệ với tôi\"",
-    "hint": "Các công việc lọc theo \"Tôi theo dõi\" hay \"Giao cho các agent của tôi\" chưa hiện được cho tới khi subscription và agent của bạn tải xong."
+    "hint": "Các công việc lọc theo \"Tôi theo dõi\" hay \"Công việc của các agent của tôi\" chưa hiện được cho tới khi subscription và agent của bạn tải xong."
   },
   "source_context": {
     "create_action": "Tạo công việc con từ đây",
@@ -192,10 +192,11 @@
     "section_relation": "Quan hệ với tôi",
     "relation_assigned": "Được giao cho tôi",
     "relation_created": "Do tôi tạo",
-    "relation_my_agents": "Giao cho các agent của tôi",
+    "relation_my_agents": "Công việc của các agent của tôi",
     "relation_subscribed": "Tôi theo dõi",
     "section_agent_status": "Trạng thái agent",
     "agent_status_running": "Đang chạy",
+    "agent_status_idle": "Nhàn rỗi",
     "section_read_state": "Trạng thái đọc",
     "read_state_unread": "Chưa đọc",
     "operator_label": "Khớp",
@@ -315,6 +316,7 @@
     "card_project": "Dự án",
     "card_labels": "Nhãn",
     "card_child_progress": "Tiến độ công việc con",
+    "card_pull_requests": "Pull request",
     "show_sub_issues": "Hiện công việc con",
     "layout_options": "Tùy chọn {{layout}}"
   },
@@ -386,6 +388,7 @@
       "created_at": "Ngày tạo",
       "updated_at": "Ngày cập nhật",
       "child_progress": "Tiến độ công việc con",
+      "pull_requests": "Pull request",
       "creator": "Người tạo"
     },
     "calculation": {
@@ -486,6 +489,17 @@
     "section_pull_requests": "Pull request",
     "section_metadata": "Siêu dữ liệu",
     "section_details": "Chi tiết",
+    "sidebar_settings": {
+      "open": "Tùy chỉnh thanh bên",
+      "title": "Thanh bên",
+      "reset": "Đặt lại",
+      "footer": "Kéo để sắp xếp lại. Áp dụng cho mọi công việc.",
+      "always_shown": "Luôn hiển thị",
+      "empty": "Không có mục nào trên công việc này",
+      "customize": "Tùy chỉnh",
+      "drag_handle": "Sắp xếp lại {{section}}",
+      "hidden_count_other": "{{count}} mục đã ẩn"
+    },
     "section_quick_actions": "Thao tác nhanh",
     "quick_actions_more": "Hiện thêm {{count}}",
     "quick_action_runs_as": "Chạy dưới danh nghĩa {{name}}",
@@ -499,6 +513,7 @@
     "quick_action_blocked_body": "“{{name}}” chạy dưới danh nghĩa một agent mà bạn không được phép kích hoạt. Hãy nhờ quản trị viên không gian làm việc cho phép nhóm dùng agent đó, hoặc trỏ thao tác này tới một agent dùng chung.",
     "quick_action_blocked_ok": "Đã hiểu",
     "pull_requests_loading": "Đang tải…",
+    "pull_request_state_open": "Đang mở",
     "pull_request_state_draft": "Bản nháp",
     "pull_request_state_merged": "Đã hợp nhất",
     "pull_request_state_closed": "Đã đóng",
@@ -536,6 +551,8 @@
     "unsubscribe": "Hủy đăng ký theo dõi",
     "delegated_subscription_badge": "Đang theo dõi qua agent",
     "delegated_subscription_hint": "Agent của bạn đã tạo công việc này thay mặt bạn, nên bạn được đăng ký theo dõi nó. Bạn sẽ nhận thông báo khi nó cần duyệt, hoàn thành hoặc bị tắc.",
+    "project_subscription_badge": "Qua dự án",
+    "project_subscription_hint": "Bạn đang theo dõi mọi công việc trong dự án này. Hủy theo dõi tại đây chỉ dừng thông báo cho công việc này.",
     "unsubscribe_this": "Hủy theo dõi công việc này",
     "unsubscribe_subtree": "Hủy theo dõi công việc này và các công việc con của nó",
     "unsubscribe_subtree_failed": "Không thể hủy theo dõi các công việc con. Hãy thử lại.",
@@ -579,10 +596,12 @@
   },
   "timeline": {
     "loading": "Đang tải...",
-    "jump_to_latest": "Nhảy tới mới nhất"
+    "jump_to_latest": "Nhảy tới mới nhất",
+    "new_comments_other": "{{count}} bình luận mới"
   },
   "activity": {
     "created": "đã tạo công việc này",
+    "created_on_behalf_of": "đã tạo công việc này thay mặt {{name}}",
     "self_assigned": "đã tự giao công việc này",
     "assigned_to": "đã giao cho {{name}}",
     "removed_assignee": "đã gỡ người được giao",
@@ -634,7 +653,10 @@
     "wakeup_checkin": "kiểm tra âm thầm: {{note}}",
     "wakeup_checkin_coalesced_other": "{{count}} lần kiểm tra âm thầm · mới nhất: {{note}}",
     "wakeup_chip_created_by": "Wakeup của {{name}}",
-    "wakeup_chip_system": "Quy tắc hệ thống"
+    "wakeup_chip_system": "Quy tắc hệ thống",
+    "environment_stopped": "đã dừng môi trường {{name}}",
+    "environment_restarted": "đã khởi động lại môi trường {{name}}",
+    "environment_started": "đã khởi động môi trường {{name}}"
   },
   "comment": {
     "add_reaction": "Thêm biểu cảm",
@@ -731,7 +753,10 @@
     "recipient_count_other": "{{count}} agent sẽ nhận được tin nhắn này",
     "steer_attachment_notice": "Chỉ văn bản mới có thể tham gia một lần chạy đang diễn ra, nên tin nhắn có tệp sẽ được xử lý sau lần chạy đó.",
     "restart_send": "Dừng và gửi",
-    "restart_failed": "Không thể dừng lần chạy hiện tại. Tin nhắn của bạn chưa được gửi."
+    "restart_failed": "Không thể dừng lần chạy hiện tại. Tin nhắn của bạn chưa được gửi.",
+    "reply_action": "Trả lời",
+    "actions_label": "Hành động bình luận",
+    "create_issue_from_selection": "Tạo công việc con từ đoạn đã chọn"
   },
   "reply": {
     "recipients_changed": "Đích trả lời đã thay đổi. Hãy kiểm tra lại người nhận trước khi gửi lại.",
@@ -932,7 +957,10 @@
     "delete_failed": "Xóa công việc thất bại",
     "delete_dialog_title_other": "Xóa {{count}} công việc?",
     "delete_dialog_desc_other": "Hành động này không thể hoàn tác. Nó sẽ xóa vĩnh viễn các công việc đã chọn và mọi dữ liệu liên quan.",
-    "cancel": "Hủy"
+    "cancel": "Hủy",
+    "copy_links": "Sao chép liên kết",
+    "links_copied_other": "Đã sao chép {{count}} liên kết",
+    "delete_count_other": "Xóa {{count}} công việc"
   },
   "card": {
     "update_failed": "Cập nhật công việc thất bại",
@@ -969,12 +997,14 @@
     "stop_agent_run": "Dừng lần chạy của {{name}}",
     "relations": "Quan hệ",
     "create_sub_issue": "Tạo công việc con",
+    "quick_actions": "Thao tác nhanh",
     "set_parent_issue": "Đặt công việc cha...",
     "remove_parent_issue": "Xóa công việc cha",
     "remove_parent_issue_success": "Đã xóa công việc cha",
     "add_sub_issue": "Thêm công việc con...",
     "delete_issue": "Xóa công việc",
-    "mark_duplicate": "Đánh dấu trùng lặp..."
+    "mark_duplicate": "Đánh dấu trùng lặp...",
+    "open_in_new_window": "Mở trong cửa sổ mới"
   },
   "pickers": {
     "custom_property": {
@@ -1070,7 +1100,7 @@
     "variant_my_any": "Bất kỳ quan hệ nào",
     "variant_my_assigned": "Được giao cho tôi",
     "variant_my_created": "Do tôi tạo",
-    "variant_my_involved": "Liên quan"
+    "variant_my_involved": "Công việc của các agent của tôi"
   },
   "plugins": {
     "panels": "Plugin",
@@ -1347,15 +1377,16 @@
       "enable": "Bật cho công việc này",
       "toggle": "Đánh thức người được giao khi công việc con hoàn thành",
       "save_error": "Không thể lưu quy tắc hệ thống.",
-      "default_on": "Mặc định bật trong không gian làm việc này. Thay đổi mặc định tại Cài đặt → Wakeup.",
-      "default_off": "Mặc định tắt trong không gian làm việc này. Thay đổi mặc định tại Cài đặt → Wakeup.",
+      "default_on": "Mặc định bật trong không gian làm việc này.",
+      "default_off": "Mặc định tắt trong không gian làm việc này.",
       "notify_member": "Thông báo cho {{name}} trong hộp thư đến của họ",
       "instruction": "Việc cần làm khi được đánh thức",
       "instruction_edit": "Chỉnh sửa hướng dẫn",
       "instruction_default": "Chưa đặt trên công việc này; dùng mặc định:",
       "instruction_placeholder": "Để trống để dùng mặc định",
       "instruction_invalid": "Giữ hướng dẫn trong giới hạn 4.000 byte.",
-      "paused": "Đã tạm dừng: {{reason}}"
+      "paused": "Đã tạm dừng: {{reason}}",
+      "default_change": "Thay đổi mặc định"
     },
     "cond": {
       "status": "Khi công việc này chuyển sang {{status}}",
@@ -1712,15 +1743,12 @@
       "name_placeholder": "Tên trạng thái",
       "add": "Thêm"
     },
-    "menu": {
-      "view_flow": "Xem toàn bộ luồng",
-      "switch": "Đổi quy trình"
-    },
     "flow": {
       "title": "Quy trình {{workflow}}",
       "scope_own": "Chỉ dự án này dùng quy trình này.",
       "no_handoff_here": "Không bàn giao",
-      "scope_shared_other": "{{count}} dự án dùng quy trình này. Các bàn giao của nó áp dụng cho mọi dự án đang dùng nó."
+      "scope_shared_other": "{{count}} dự án dùng quy trình này. Các bàn giao của nó áp dụng cho mọi dự án đang dùng nó.",
+      "switch": "Chuyển quy trình"
     },
     "templates": {
       "delivery": {
@@ -1849,7 +1877,9 @@
       "running": "Đang chạy",
       "exited": "Đã thoát",
       "stopped": "Đã dừng",
-      "unreachable": "Không phản hồi"
+      "unreachable": "Không phản hồi",
+      "stopping": "Đang dừng",
+      "preparing": "Đang chuẩn bị"
     },
     "expires_in_minutes_other": "Hết hạn sau {{count}} phút",
     "expires_in_hours_other": "Hết hạn sau {{count}} giờ",
@@ -1864,6 +1894,85 @@
     "open": "Mở",
     "copy_url": "Sao chép URL",
     "copied": "Đã sao chép URL",
-    "copy_failed": "Không thể sao chép URL"
+    "copy_failed": "Không thể sao chép URL",
+    "offline": "Ngoại tuyến",
+    "machine_offline": "{{machine}} đang ngoại tuyến",
+    "more_actions": "Thêm hành động",
+    "view_logs": "Xem nhật ký",
+    "restart": "Khởi động lại",
+    "stop": "Dừng",
+    "stop_confirm_item": "Dừng…",
+    "run_first": "lượt chạy đầu tiên",
+    "run_nth_other": "lượt chạy {{count}}",
+    "someone": "Ai đó",
+    "started_by": "Khởi động bởi {{name}}",
+    "restarted_by": "Khởi động lại bởi {{name}}",
+    "started_by_agent_in_run": "Khởi động bởi {{name}} trong {{run}}",
+    "stopped_by": "Dừng bởi {{name}}",
+    "stopped_on_expiry": "Đã dừng khi hết hạn",
+    "exited_ago": "Đã thoát {{time}}",
+    "exit_code": "Mã thoát {{code}}",
+    "detected_label": "Dịch vụ đã phát hiện · {{name}}",
+    "detected_no_logs": "Dịch vụ này không được khởi động từ cấu hình môi trường nên không có nhật ký và không thể khởi động lại.",
+    "offline_hint": "Khả dụng khi máy này trực tuyến trở lại.",
+    "outdated_hint": "Cập nhật Multica trên máy này để quản lý từ đây.",
+    "no_permission_hint": "Chỉ thành viên được dùng máy này mới có thể dừng hoặc khởi động lại nó.",
+    "waiting_machine": "Đang chờ máy",
+    "waiting_ready": "Đang chờ nó sẵn sàng",
+    "no_response": "Không phản hồi",
+    "action_failed": {
+      "stop": "Không dừng được",
+      "restart": "Không khởi động lại được",
+      "start": "Không khởi động được"
+    },
+    "stop_confirm_title": "Dừng {{name}}?",
+    "stop_confirm_body": "Dịch vụ này ({{process}}) được phát hiện, không khởi động từ cấu hình môi trường. Một khi đã dừng thì không thể khởi động lại tại đây; cần một agent khởi động lại nó.",
+    "cancel": "Hủy",
+    "preparing_title": "{{name}} đang chuẩn bị môi trường",
+    "preparing_hint": "Nó sẽ hiện tại đây khi bắt đầu chạy",
+    "start_menu": {
+      "trigger": "Khởi động một môi trường",
+      "note": "Khởi động từ cấu hình môi trường của dự án, dùng code từ lượt chạy mới nhất trên máy này.",
+      "no_permission": "Chỉ thành viên được dùng một máy mới có thể khởi động môi trường trên máy đó.",
+      "nothing_to_start": "Công việc này chưa chạy lần nào, hoặc code từ các lượt chạy trước đã bị dọn sạch, nên không có gì để khởi động trực tiếp.",
+      "ask_agent": "Nhờ {{name}} khởi động",
+      "ask_any_agent": "Nhờ một agent khởi động",
+      "new_run": "Lượt chạy mới",
+      "preparing": "Đang chuẩn bị",
+      "ask_agent_hint": "{{name}} sẽ chuẩn bị sẵn code của công việc này rồi khởi động môi trường. Nếu dự án không có cấu hình môi trường, agent sẽ tự tìm cách khởi động.",
+      "ask_any_agent_hint": "Agent sẽ chuẩn bị sẵn code của công việc này rồi khởi động môi trường. Nếu dự án không có cấu hình môi trường, agent sẽ tự tìm cách khởi động.",
+      "ask_failed": "Không nhờ được agent",
+      "agent_instruction": "Khởi động môi trường: chuẩn bị sẵn code của công việc này, rồi chạy `multica env start` cho các môi trường mà dự án khai báo; nếu dự án không khai báo môi trường nào, tự tìm cách khởi động. Giữ cho nó chạy và trả lời kèm địa chỉ của nó."
+    },
+    "log": {
+      "title": "{{name}} · Nhật ký",
+      "filter": "Lọc nhật ký",
+      "wrap": "Ngắt dòng",
+      "follow": "Theo dõi mới nhất",
+      "copy": "Sao chép",
+      "copied": "Đã sao chép nhật ký",
+      "copy_failed": "Không sao chép được nhật ký",
+      "refresh": "Làm mới",
+      "footer_other": "Đang hiện {{count}} dòng cuối · cập nhật {{time}}",
+      "loading": "Đang đọc nhật ký…",
+      "empty": "Chưa có đầu ra",
+      "no_match": "Không có dòng khớp",
+      "no_response": "Máy không phản hồi",
+      "failed": "Không đọc được nhật ký: {{error}}",
+      "offline_excerpt": "Máy này đang ngoại tuyến. Đây là những dòng cuối nó in ra trước khi thoát.",
+      "offline_empty": "Nhật ký khả dụng khi máy này trực tuyến trở lại.",
+      "exit_divider": "Đã thoát lúc {{time}}",
+      "exit_divider_code": "Đã thoát lúc {{time}} · mã thoát {{code}}",
+      "stopped_divider": "Đã dừng lúc {{time}}"
+    },
+    "app_desktop_hint": "Một ứng dụng desktop. Chuyển sang cửa sổ của nó từ Multica Desktop trên máy đang chạy nó.",
+    "app_remote_hint": "Chạy trên {{machine}}. Chuyển sang cửa sổ của nó từ Multica Desktop trên máy đó.",
+    "focus": "Chuyển sang cửa sổ",
+    "focus_gone": "{{name}} không còn chạy nữa",
+    "focus_unsupported": "Daemon của máy này chưa chuyển được sang cửa sổ ứng dụng. Cập nhật Multica rồi thử lại.",
+    "focus_unavailable": "Daemon cục bộ không chạy",
+    "focus_failed": "Không chuyển được sang {{name}}",
+    "retry": "Thử lại",
+    "dismiss": "Bỏ qua"
   }
 }

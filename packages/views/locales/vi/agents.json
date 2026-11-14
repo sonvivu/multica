@@ -64,14 +64,6 @@
     "search_runtime_filtered": "Không có agent nào trên \"{{machine}}\" khớp với \"{{query}}\".",
     "runtime_filtered": "Không có agent nào trên \"{{machine}}\"."
   },
-  "runtime_filter": {
-    "all": "Tất cả runtime",
-    "section_local": "Cục bộ",
-    "section_remote": "Từ xa",
-    "section_cloud": "Đám mây",
-    "agent_count_other": "{{count}} agent",
-    "empty": "Chưa có máy nào"
-  },
   "columns": {
     "agent": "Agent",
     "status": "Trạng thái",
@@ -199,7 +191,6 @@
     "rename_required": "Tên là bắt buộc",
     "edit_description_title": "Chỉnh sửa mô tả",
     "description_placeholder": "Agent này làm gì?",
-    "save": "Lưu",
     "cancel": "Hủy"
   },
   "overview": {
@@ -222,12 +213,7 @@
     "edit_access_aria": "Quyền truy cập: {{value}}. Đổi quyền truy cập",
     "all_settings": "Tất cả cài đặt"
   },
-  "skill_attach": {
-    "trigger_aria": "Gắn skill của không gian làm việc",
-    "trigger_label": "Gắn"
-  },
   "pickers": {
-    "concurrency_tooltip": "Đồng thời · tối đa {{value}} lượt chạy đồng thời",
     "concurrency_range": "Số lượt chạy đồng thời tối đa ({{min}}–{{max}})",
     "runtime_none": "Không có runtime",
     "runtime_tooltip": "Runtime · {{name}} · {{status}}",
@@ -303,13 +289,8 @@
     "duplicate_title": "Nhân bản {{name}}",
     "step_ai": "Xây dựng qua trò chuyện",
     "modes": {
-      "template": {
-        "title": "Dùng mẫu",
-        "description": "Bắt đầu từ hướng dẫn và các skill có sẵn, rồi tùy chỉnh mọi chi tiết cho không gian làm việc của bạn."
-      },
       "ai": {
-        "title": "Xây dựng bằng AI",
-        "description": "Tạo cấu hình có thể chỉnh sửa thông qua trò chuyện."
+        "title": "Xây dựng bằng AI"
       }
     },
     "sections": {
@@ -337,10 +318,6 @@
       }
     },
     "builder": {
-      "setup_title": "Chọn runtime cho Agent Builder",
-      "setup_description": "Runtime này hỗ trợ quá trình thiết lập và là mặc định cho agent mới.",
-      "start": "Bắt đầu trò chuyện",
-      "connect_runtime": "Kết nối runtime",
       "draft_parse_failed": "Không thể điền bản trả lời này vào biểu mẫu. Hãy yêu cầu trợ lý tạo lại bản nháp, hoặc tự điền thủ công.",
       "start_failed": "Không bắt đầu được Agent Builder.",
       "send_failed": "Không gửi được tin nhắn của bạn.",
@@ -448,23 +425,17 @@
     }
   },
   "create_dialog": {
-    "title_create": "Tạo Agent",
-    "title_duplicate": "Nhân bản Agent",
-    "description_duplicate": "Tạo agent mới dựa trên \"{{name}}\". Hướng dẫn, biến môi trường và skill được sao chép sẵn cho bạn.",
     "name_label": "Tên",
     "name_placeholder": "ví dụ: Deep Research Agent",
     "description_label": "Mô tả",
     "description_placeholder": "Agent này làm gì?",
-    "visibility_label": "Mức hiển thị",
     "access": {
-      "label": "Quyền truy cập",
       "private_title": "Riêng tư",
       "private_desc": "Chỉ bạn mới chạy được agent này",
       "public_title": "Công khai",
       "public_desc": "Chọn người có thể chạy agent này",
       "public_workspace_option": "Mọi người trong không gian làm việc này",
       "public_members_group": "Người cụ thể",
-      "public_members_empty": "Không có thành viên nào trong không gian làm việc để chọn",
       "public_targets_empty_hint": "Hãy chọn ít nhất một tùy chọn bên dưới — nếu không agent sẽ ở trạng thái riêng tư."
     },
     "runtime_label": "Runtime",
@@ -479,17 +450,10 @@
     "runtime_no_results": "Không có máy phù hợp",
     "runtime_group_online": "{{online}}/{{total}} trực tuyến",
     "duplicate_copy_suffix": " (Bản sao)",
-    "create": "Tạo",
-    "creating": "Đang tạo...",
-    "cancel": "Hủy",
-    "create_failed_toast": "Tạo agent thất bại",
     "skill_attach_failed_toast": "Đã tạo agent, nhưng gắn skill thất bại: {{error}}",
     "squad_join_failed_toast": "Agent \"{{name}}\" đã được tạo nhưng không tham gia được squad: {{error}}. Bạn có thể thêm thủ công từ mục Thành viên.",
     "instructions": {
       "label": "Hướng dẫn",
-      "placeholder_blank": "Nhấn để viết hướng dẫn…",
-      "placeholder_duplicate": "Nhấn để xem hoặc sửa hướng dẫn đã nhân bản",
-      "collapse": "Thu gọn",
       "editor_placeholder": "Viết những gì agent này nên làm, nên tập trung vào điều gì, nên tránh điều gì…"
     },
     "skills_section": {
@@ -566,6 +530,7 @@
       "bulk_placeholder": "API_KEY=value\nBASE_URL=https://example.com",
       "bulk_plaintext_notice": "Giá trị hiển thị dạng văn bản thuần khi sửa hàng loạt.",
       "bulk_unsupported_toast": "\"{{key}}\" không thể hiển thị dạng văn bản — hãy sửa nó theo hàng",
+      "bulk_invalid_key_toast": "Văn bản hàng loạt chỉ hỗ trợ tên dạng API_KEY — hãy sửa \"{{key}}\" theo hàng",
       "parse_error_malformed": "Dòng {{line}} không phải là phép gán KEY=value",
       "parse_error_duplicate": "Khóa \"{{key}}\" bị trùng ở dòng {{line}}",
       "paste_invalid_toast": "Không phân tích được các biến môi trường đã dán",
@@ -768,7 +733,7 @@
       "add_failed_toast": "Thêm skill thất bại"
     },
     "integrations": {
-      "members_note": "Chỉ chủ sở hữu và quản trị viên của không gian làm việc mới quản lý được kết nối này. Bạn có thể xem các bot đã kết nối trong Cài đặt → Tích hợp."
+      "members_note": "Xem và quản lý các kênh nhắn tin trên trang agent."
     },
     "activity": {
       "status": {
@@ -987,7 +952,39 @@
     "tool_kind_write": "Chỉnh sửa",
     "tool_kind_read": "Đọc",
     "tool_kind_misc": "Khác",
-    "trigger_wakeup": "Đánh thức"
+    "trigger_wakeup": "Đánh thức",
+    "context_receipt_title": "Đã nhận ngữ cảnh",
+    "context_receipt_summary_other": "{{count}} nguồn · {{size}}",
+    "context_receipt_model": "Model",
+    "context_receipt_session": "Phiên",
+    "context_receipt_session_resumed": "Đã tiếp tục một phiên trước (lịch sử của phiên đó cũng nằm trong ngữ cảnh)",
+    "context_receipt_session_new": "Phiên mới",
+    "context_receipt_session_fresh_retry": "Phiên mới sau khi yêu cầu tiếp tục bị từ chối",
+    "context_receipt_mcp": "Máy chủ MCP",
+    "context_receipt_mcp_none": "Không có",
+    "context_receipt_warning": "{{source}}: {{status}}",
+    "context_receipt_col_source": "Nguồn",
+    "context_receipt_col_size": "Kích thước",
+    "context_receipt_col_delivery": "Gửi qua",
+    "context_receipt_col_load": "Đã tải",
+    "context_receipt_same_as_brief": "Giống bản tóm tắt runtime",
+    "context_receipt_footnote": "Được daemon ghi lại trước khi agent bắt đầu. Chỉ lưu kích thước và hash ngắn, không lưu nội dung. “Đã xác minh” nghĩa là phiên bản runtime này đã được kiểm tra là tải được file. Kích thước và hash của skill bao gồm toàn bộ gói đã ghi.",
+    "context_source_runtime_brief": "Bản tóm tắt runtime",
+    "context_source_agent_instructions": "Hướng dẫn agent",
+    "context_source_project_description": "Mô tả dự án",
+    "context_source_existing_instructions": "Hướng dẫn của repo",
+    "context_source_task_prompt": "Prompt của lượt",
+    "context_source_skill": "Skill: {{name}}",
+    "context_delivery_file": "File",
+    "context_delivery_inline": "System prompt",
+    "context_delivery_prompt": "Đầu vào của lượt",
+    "context_delivery_embedded": "Trong bản tóm tắt runtime",
+    "context_delivery_none": "Không có kênh",
+    "context_load_delivered": "Đã gửi",
+    "context_load_verified": "Đã xác minh",
+    "context_load_verified_other_version": "Chỉ xác minh trên {{version}}",
+    "context_load_unverified": "Chưa xác minh",
+    "context_load_not_delivered": "Chưa gửi"
   },
   "task_failure": {
     "cancelled_by_system": "Bị hệ thống hủy",
@@ -1044,7 +1041,6 @@
     "section_owner": "Chủ sở hữu",
     "section_model": "Model"
   },
-  "actions": {},
   "intro": {
     "title": "Thuê đồng đội AI đầu tiên của bạn",
     "description": "Agent nhận công việc như đồng đội: làm trên runtime của bạn bằng các công cụ như Claude Code và Codex, rồi trả kết quả trong phần bình luận.",

@@ -16,7 +16,6 @@
       "reorder": "Sắp xếp lại {{name}}"
     },
     "reorder_hint": "Kéo thả trong cùng một nhóm để sắp xếp lại bảng, danh sách và menu.",
-    "built_in_dialog": {},
     "editor": {
       "create_title": "Trạng thái mới",
       "edit_title": "Chỉnh sửa trạng thái",
@@ -83,23 +82,6 @@
     "builtin_badge": "Tích hợp sẵn",
     "workflow_usage_other": "{{count}} quy trình đang dùng",
     "workflow_usage_none": "Không thuộc quy trình nào"
-  },
-  "wakeups": {
-    "description": "Quy tắc nền tảng áp dụng cho mọi công việc. Mỗi công việc có thể thay đổi chúng trong mục Wakeups của riêng nó.",
-    "child_done_title": "Khi công việc con hoàn thành",
-    "child_done_description": "Đánh thức người được gán của công việc cha khi một giai đoạn kết thúc và giai đoạn sau đang chờ, và một lần nữa khi mọi công việc con đã đóng. Nếu người được gán là thành viên, họ sẽ nhận thông báo trong hộp thư đến thay thế.",
-    "enabled": "Bật theo mặc định",
-    "instruction": "Chỉ dẫn mặc định",
-    "instruction_hint": "Gửi tới agent được đánh thức. Để trống để dùng chỉ dẫn tích hợp bên dưới.",
-    "instruction_placeholder": "Để trống để dùng chỉ dẫn tích hợp",
-    "builtin": "Chỉ dẫn tích hợp",
-    "instruction_invalid": "Giữ chỉ dẫn trong giới hạn 4.000 byte.",
-    "save": "Lưu",
-    "saving": "Đang lưu…",
-    "save_error": "Không thể lưu giá trị mặc định.",
-    "customized_other": "{{count}} công việc đang mở có cài đặt riêng và bỏ qua mặc định này.",
-    "admin_only": "Chỉ chủ sở hữu và quản trị viên mới thay đổi được các mặc định này.",
-    "load_error": "Không thể tải mặc định wakeup."
   },
   "quick_actions": {
     "title": "Thao tác nhanh",
@@ -187,6 +169,12 @@
       "after_run": "Bắt đầu sau lượt chạy này",
       "hint": "Chỉ đặt mặc định. Bạn vẫn có thể thay đổi cho từng tin nhắn trước khi gửi."
     },
+    "comment_images": {
+      "title": "Ảnh trong bình luận",
+      "thumbnails": "Ảnh thu nhỏ",
+      "full": "Kích thước đầy đủ",
+      "hint": "Ảnh thu nhỏ giúp chuỗi bình luận dài gọn hơn; bấm vào ảnh để xem kích thước đầy đủ."
+    },
     "comments_title": "Bình luận & trò chuyện",
     "region_title": "Ngôn ngữ & khu vực",
     "issue_fields_title": "Các trường hiển thị khi tạo công việc",
@@ -212,7 +200,86 @@
       "title": "Chủ đề",
       "description": "Màu sắc, đường viền, bóng đổ và góc bo khắp ứng dụng.",
       "default": "Mặc định",
-      "pop": "Pop"
+      "pop": "Pop",
+      "built_in": "Có sẵn",
+      "installed": "Đã cài đặt",
+      "remove": "Xóa {{name}}",
+      "safe_mode": "Chế độ an toàn: chủ đề của bạn đang tạm dừng cho đến khi bạn đóng cửa sổ này.",
+      "safe_mode_exit": "Dùng chủ đề của tôi",
+      "folder": "Thư mục chủ đề",
+      "folder_problems": "Một số chủ đề trong thư mục chủ đề không vượt qua kiểm tra. Hãy sửa rồi lưu; phiên bản cuối cùng đạt kiểm tra vẫn đang được dùng."
+    },
+    "import": {
+      "button": "Nhập chủ đề",
+      "from_zip": "Tệp chủ đề (.zip)",
+      "from_folder": "Thư mục chủ đề",
+      "storage_full": "Không đủ dung lượng trên thiết bị này để lưu chủ đề. Hãy xóa một chủ đề khác rồi thử lại.",
+      "confirm_title": "Cài đặt “{{name}}”?",
+      "warning": "Chủ đề có thể đổi giao diện mọi trang, kể cả hộp thoại và cảnh báo. Chỉ cài chủ đề từ người bạn tin tưởng.",
+      "author": "Tác giả",
+      "version": "Phiên bản",
+      "replaces": "{{to}} (thay thế {{from}})",
+      "includes": "Bao gồm",
+      "cancel": "Hủy",
+      "confirm": "Cài đặt và dùng",
+      "error_title": "Không cài đặt được chủ đề này",
+      "error_description": "Không có gì thay đổi. Tệp chủ đề có các vấn đề sau:",
+      "close": "Đóng",
+      "has_options_other": "{{count}} tùy chọn",
+      "has_assets_other": "{{count}} phông chữ và ảnh",
+      "beta": "Beta",
+      "beta_note": "Chủ đề tùy chỉnh đang ở giai đoạn beta. Các biến và manifest mà chủ đề dùng có thể thay đổi, và chủ đề có thể cần cập nhật."
+    },
+    "store": {
+      "manage": "Quản lý",
+      "title": "Chủ đề",
+      "description": "Các chủ đề bạn đã cài đặt, và chủ đề do cộng đồng tạo.",
+      "description_local": "Các chủ đề bạn đã cài đặt.",
+      "search": "Tìm kiếm chủ đề",
+      "installed_only": "Chỉ hiện đã cài đặt",
+      "showing_other": "Đang hiện {{count}} chủ đề",
+      "installed": "Đã cài đặt",
+      "loading": "Đang tải chủ đề",
+      "error": "Không tải được kho chủ đề. Hãy thử lại sau giây lát.",
+      "retry": "Thử lại",
+      "none_installed": "Chưa cài đặt chủ đề nào.",
+      "no_results": "Không có chủ đề nào khớp với “{{query}}”.",
+      "by": "bởi {{author}}",
+      "downloads_other": "{{downloads}} lượt tải xuống",
+      "source": "{{repo}} trên GitHub",
+      "no_preview": "Không có bản xem trước",
+      "screenshot_alt": "{{name}} ở chế độ {{mode}}",
+      "install": "Cài đặt",
+      "installing": "Đang cài đặt…",
+      "use": "Dùng",
+      "in_use": "Đang dùng",
+      "update": "Cập nhật lên {{version}}",
+      "remove": "Xóa",
+      "taken": "Đã cài đặt một chủ đề có id này",
+      "installed_toast": "Đã cài đặt “{{name}}”.",
+      "updated": "Đã cập nhật “{{name}}” lên {{version}}.",
+      "install_failed": "Không cài đặt được “{{name}}”",
+      "warning": "Chủ đề có thể đổi giao diện mọi trang, kể cả hộp thoại và cảnh báo. Chủ đề trong kho được kiểm tra tự động, nhưng do cộng đồng tạo ra."
+    },
+    "updates": {
+      "title": "Chủ đề trong kho",
+      "description_other": "Bạn có {{count}} chủ đề từ kho.",
+      "check": "Kiểm tra cập nhật",
+      "checking": "Đang kiểm tra…",
+      "up_to_date": "Chủ đề trong kho của bạn đã cập nhật mới nhất.",
+      "update_all": "Cập nhật tất cả ({{count}})"
+    },
+    "own": {
+      "title": "Tự tạo chủ đề",
+      "description": "Nhập chủ đề dưới dạng .zip hoặc thư mục, hoặc bắt đầu từ bản sao của chủ đề hiện tại."
+    },
+    "tools": {
+      "duplicate": "Nhân bản “{{name}}” thành chủ đề mới",
+      "open_folder": "Mở thư mục chủ đề",
+      "guide": "Cách tạo chủ đề",
+      "duplicated_web": "Đã tải xuống {{file}}. Giải nén, sửa theme.css, rồi nhập thư mục.",
+      "duplicated_desktop": "Đã tạo “{{name}}” trong thư mục chủ đề. Sửa theme.css sẽ áp dụng khi bạn lưu.",
+      "duplicate_failed": "Không tạo được bản sao: {{error}}"
     },
     "theme_options": {
       "title": "Tùy chọn chủ đề",
@@ -346,6 +413,10 @@
         "label": "Bật/tắt cửa sổ trò chuyện",
         "description": "Mở hoặc đóng cửa sổ trò chuyện nổi. Khi mở, con trỏ sẽ tập trung vào ô nhập tin nhắn."
       },
+      "newChat": {
+        "label": "Hỏi Multica",
+        "description": "Bắt đầu trò chuyện mới trong cửa sổ trò chuyện nổi."
+      },
       "findInIssue": {
         "label": "Tìm trong công việc",
         "description": "Tìm trong chi tiết công việc đang mở."
@@ -430,7 +501,10 @@
   },
   "chat": {
     "floating_label": "Cửa sổ trò chuyện nổi",
-    "floating_hint": "Hiện nút trò chuyện nổi trên mọi trang."
+    "floating_hint": "Hiện nút trò chuyện nổi trên mọi trang.",
+    "ask_agent_label": "Hỏi agent Multica",
+    "ask_agent_hint": "Agent mà trò chuyện mới từ thanh dưới cùng bắt đầu với, trong không gian làm việc này.",
+    "ask_agent_last_used": "Đã dùng gần nhất"
   },
   "issue": {
     "opening": {
@@ -498,7 +572,6 @@
       "members": "Thành viên",
       "labels": "Nhãn",
       "issue_statuses": "Trạng thái công việc",
-      "wakeups": "Wakeups",
       "properties": "Thuộc tính",
       "quick_actions": "Thao tác nhanh",
       "plugins": "Plugins",
@@ -767,9 +840,16 @@
         "label": "Mức ưu tiên & ngày đến hạn",
         "description": "Khi mức ưu tiên hoặc ngày đến hạn thay đổi trên công việc bạn theo dõi"
       },
+      "new_issues": {
+        "label": "Công việc mới",
+        "description": "Khi một công việc được tạo trong dự án bạn theo dõi"
+      },
       "agent_activity": {
         "label": "Hoạt động của agent",
         "description": "Khi một lượt chạy của agent thất bại"
+      },
+      "chat_replies": {
+        "label": "Bao gồm trả lời trò chuyện"
       }
     },
     "system": {
@@ -778,7 +858,7 @@
     },
     "browser": {
       "label": "Thông báo trình duyệt",
-      "hint": "Cho phép trình duyệt này hiển thị biểu ngữ thông báo cho mục hộp thư đến mới.",
+      "hint": "Cho phép trình duyệt này hiển thị biểu ngữ cho thông báo Hộp thư đến và trả lời trò chuyện.",
       "enable": "Bật",
       "granted": "Trình duyệt này có thể hiển thị biểu ngữ thông báo.",
       "denied": "Bị trình duyệt chặn. Bật thông báo cho trang này trong cài đặt trình duyệt.",
@@ -1287,7 +1367,8 @@
     "github_load_more": "Tải thêm",
     "github_selected_count": "{{count}} đã chọn",
     "github_cancel": "Hủy",
-    "github_import": "Thêm repo",
+    "github_import": "Thêm {{count}} repo",
+    "github_import_other": "Thêm {{count}} repo",
     "save": "Lưu",
     "saving": "Đang lưu...",
     "saved_hint": "Đã lưu mọi thay đổi",
@@ -1320,7 +1401,10 @@
       "close_others": "Đóng các tab khác",
       "open_window": "Mở thành cửa sổ mới",
       "new": "Tab mới",
-      "pinned_name": "{{title}} (đã ghim)"
+      "pinned_name": "{{title}} (đã ghim)",
+      "copy_link": "Sao chép liên kết",
+      "link_copied": "Đã sao chép liên kết",
+      "close_right": "Đóng các tab bên phải"
     },
     "updates": {
       "title": "Cập nhật",
@@ -1522,7 +1606,40 @@
     "github_actions": "Thao tác GitHub"
   },
   "channels": {
-    "breadcrumb": "Đường dẫn điều hướng"
+    "breadcrumb": "Đường dẫn điều hướng",
+    "add": "Thêm kênh nhắn tin",
+    "connect": "Kết nối",
+    "disconnect": "Ngắt kết nối",
+    "open": "Mở",
+    "normal": "Đã kết nối",
+    "waiting_message": "Đang chờ tin nhắn đầu tiên",
+    "disconnected": "Đã ngắt kết nối",
+    "find_me": "Tìm tôi trên {{platform}}",
+    "manage": "Quản lý {{platform}}",
+    "last_message": "Tin nhắn gần nhất {{time}}",
+    "ask_admin": "Hỏi quản trị viên",
+    "unavailable": "Kết nối không khả dụng",
+    "permissions_title": "Ai có thể kết nối",
+    "owner_or_admin": "Chủ sở hữu agent hoặc quản trị viên không gian làm việc",
+    "admin_only": "Chỉ quản trị viên không gian làm việc",
+    "connect_title": "Kết nối kênh nhắn tin",
+    "choose_description": "Chọn một agent và một nền tảng.",
+    "authorize_description": "Kết nối {{agent}} với {{platform}}.",
+    "agent_label": "Agent",
+    "choose_agent": "Chọn một agent",
+    "platform_label": "Nền tảng",
+    "region_label": "Khu vực",
+    "method_label": "Phương thức kết nối",
+    "feishu": "Feishu (Trung Quốc)",
+    "lark": "Lark (Quốc tế)",
+    "setup_guide": "Hướng dẫn thiết lập",
+    "connection_changed": "Kết nối này không còn khả dụng. Hãy đóng hộp thoại này và thử lại.",
+    "connect_failed": "Không kết nối được bot.",
+    "connect_success": "Đã kết nối kênh nhắn tin.",
+    "disconnect_failed": "Không ngắt kết nối được bot.",
+    "disconnect_title": "Ngắt kết nối kênh nhắn tin?",
+    "disconnect_description": "Agent này sẽ ngừng nhận tin nhắn từ {{platform}}.",
+    "agent_unavailable": "Agent không khả dụng"
   },
   "mcp_usage": {
     "agent_count_other": "Được {{count}} agent sử dụng",
