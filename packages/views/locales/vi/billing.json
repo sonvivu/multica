@@ -1,71 +1,4 @@
 {
-  "title": "Thanh toán (trang kiểm thử)",
-  "subtitle": "Chuyển thẳng tới /api/v1/billing/* của multica-cloud. Chưa phải giao diện hoàn chỉnh — chỉ là gộp mọi endpoint vào một trang để kiểm chứng proxy + luồng Stripe.",
-  "endpoints": {
-    "balance": "GET /api/cloud-billing/balance",
-    "transactions": "GET /api/cloud-billing/transactions",
-    "batches": "GET /api/cloud-billing/batches",
-    "topups": "GET /api/cloud-billing/topups",
-    "buy": "GET /price-tiers · POST /checkout-sessions · POST /portal-sessions"
-  },
-  "balance": {
-    "title": "Số dư",
-    "credits_suffix": "credit",
-    "meta": "micro gốc: {{micro}} · chủ sở hữu: {{owner}}… · cập nhật {{updated}}"
-  },
-  "buy": {
-    "title": "Mua credit / Quản lý thanh toán",
-    "no_tiers": "Chưa cấu hình bậc giá nào. Có thể Cloud chưa đặt khóa Stripe — quá trình thanh toán sẽ trả về 503.",
-    "tier_money_to_credits": "{{money}} → {{credits}} credit",
-    "tier_bonus": " + {{credits}} tặng thêm",
-    "tier_bonus_with_expiry": " + {{credits}} tặng thêm ({{expiry}})",
-    "tier_id": "id: {{id}}",
-    "open_portal": "Mở Cổng thanh toán Stripe",
-    "portal_hint": "Lỗi 400 là bình thường với người dùng chưa từng thanh toán (chưa có hồ sơ khách hàng Stripe).",
-    "toast_no_url": "Cloud không trả về URL thanh toán",
-    "toast_checkout_failed": "Thanh toán thất bại",
-    "toast_no_portal_url": "Không nhận được URL cổng thanh toán",
-    "toast_portal_failed": "Mở cổng thanh toán thất bại"
-  },
-  "checkout": {
-    "session_label": "Phiên thanh toán {{prefix}}…",
-    "loading": "Đang tải trạng thái đơn hàng…",
-    "fetch_failed": "Không tải được trạng thái: {{error}}",
-    "fetch_failed_unknown": "lỗi không xác định",
-    "final_status": "Trạng thái cuối: {{status}}",
-    "polling_status": "Đang kiểm tra trạng thái… hiện tại: {{status}}",
-    "status_unknown": "không xác định",
-    "label_order": "Đơn hàng",
-    "label_tier": "Gói",
-    "label_charged": "Đã tính phí",
-    "charged_value": "{{money}} · {{credits}} credit",
-    "charged_with_bonus": "{{money}} · {{credits}} credit + {{bonus}} tặng thêm",
-    "clear_url": "Xóa khỏi URL"
-  },
-  "transactions": {
-    "title": "Giao dịch",
-    "empty": "Chưa có giao dịch nào.",
-    "credits_value": "{{value}} credit",
-    "row_meta": "{{date}} · số dư sau: {{balance}} credit · mã tham chiếu: {{ref}}",
-    "ref_empty": "—"
-  },
-  "batches": {
-    "title": "Các lô credit",
-    "empty": "Chưa có lô nào.",
-    "remaining_over_total": "{{remaining}} / {{total}} credit",
-    "id_suffix": "{{id}}…",
-    "consumed": "Đã dùng: {{value}} credit",
-    "expires_suffix": " · hết hạn {{value}}",
-    "never_expires_suffix": " · không bao giờ hết hạn"
-  },
-  "topups": {
-    "title": "Đơn nạp tiền",
-    "empty": "Chưa có đơn nạp nào.",
-    "amount_to_credits": "{{money}} → {{credits}} credit",
-    "amount_to_credits_with_bonus": "{{money}} → {{credits}} credit + {{bonus}} tặng thêm",
-    "row_meta": "{{date}} · stripe: {{checkout}}",
-    "stripe_empty": "—"
-  },
   "workspace": {
     "title": "Thanh toán",
     "description": "Quản lý gói, giới hạn, số ghế người dùng và thanh toán Stripe của không gian làm việc này.",
@@ -169,7 +102,6 @@
     },
     "limits": {
       "title": "Mức sử dụng và giới hạn",
-      "issues": "Công việc",
       "autopilots": "Lượt chạy automation",
       "unlimited": "Không giới hạn",
       "per_month": "{{count}} / tháng",
@@ -239,12 +171,6 @@
       "description": "Chu kỳ thanh toán: {{interval}}. Số thành viên là người hiện tại: {{count}}. Stripe sẽ đếm lại số ghế và hiển thị tổng số tiền cuối cùng trước khi thanh toán."
     }
   },
-  "shared": {
-    "request_failed": "Yêu cầu thất bại",
-    "refresh": "Làm mới",
-    "paging": "trang {{page}} / {{totalPages}} · tổng {{total}}",
-    "date_dash": "—"
-  },
   "return_page": {
     "redirecting": "Đang đưa bạn về trang thanh toán của không gian làm việc…",
     "load_failed_title": "Không mở được trang thanh toán của không gian làm việc",
@@ -253,5 +179,11 @@
     "workspace_missing_description": "Bạn đã quay lại từ Stripe, nhưng không gian làm việc này không còn khả dụng với bạn — có thể nó đã bị loại bỏ, hoặc quyền truy cập của bạn đã thay đổi. Hãy mở mục Thanh toán trong không gian làm việc bạn dự định để kiểm tra trạng thái hiện tại.",
     "retry": "Thử lại",
     "go_to_app": "Đi tới Multica"
+  },
+  "paid_feature": {
+    "read_only": "Chỉ đọc. Nâng cấp để chỉnh sửa.",
+    "unavailable": "Không nằm trong gói của không gian làm việc này.",
+    "view_plans": "Xem các gói",
+    "locked_error": "Tính năng này không nằm trong gói của không gian làm việc. Các cài đặt hiện có vẫn hoạt động; nâng cấp để thêm mới."
   }
 }

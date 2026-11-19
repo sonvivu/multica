@@ -102,6 +102,7 @@
   "mention": {
     "group_users": "Người dùng",
     "group_issues": "Công việc",
+    "group_projects": "Dự án",
     "all_members": "Tất cả thành viên",
     "agent_badge": "Agent",
     "squad_badge": "Squad",

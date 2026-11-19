@@ -841,7 +841,7 @@
     },
     "others_issues": {
       "label": "Công việc của người khác",
-      "description": "Công việc được gán cho người khác hoặc agent của họ, mà bạn chỉ theo dõi vì đã tạo, bình luận hoặc được nhắc đến. Cập nhật quan trọng gồm @nhắc, trả lời trong chuỗi bạn đã tham gia, và trạng thái cần có người xử lý như đang xem xét, bị chặn hoặc đã xong.",
+      "description": "Công việc được gán cho người khác hoặc agent của họ, mà bạn chỉ theo dõi vì đã tạo, bình luận hoặc được nhắc đến. Cập nhật quan trọng gồm @nhắc, trả lời trong chuỗi bạn đã tham gia, và, khi đã bật Thay đổi trạng thái, trạng thái cần có người xử lý như đang xem xét, bị chặn hoặc đã xong.",
       "key_updates": "Chỉ cập nhật quan trọng",
       "all": "Mọi hoạt động"
     },
@@ -957,7 +957,7 @@
     "section_general": "Chi tiết không gian làm việc",
     "logo_label": "Logo không gian làm việc",
     "change_logo_aria": "Đổi logo không gian làm việc",
-    "click_logo_hint": "Nhấp vào logo để tải lên ảnh mới",
+    "click_logo_hint": "Nhấp vào logo để tải lên ảnh hoặc tạo biểu tượng chữ",
     "toast_logo_failed": "Không thể tải lên logo không gian làm việc",
     "name_label": "Tên",
     "description_label": "Mô tả",
@@ -1021,7 +1021,7 @@
     "disconnect": "Ngắt kết nối",
     "disconnecting": "Đang ngắt kết nối…",
     "disconnect_confirm_title": "Ngắt kết nối GitHub App",
-    "disconnect_confirm_description": "Multica sẽ ngừng nhận webhook cho bản cài đặt này. Các bản sao và liên kết PR hiện có được giữ nguyên; kết nối lại bất cứ lúc nào để tiếp tục cập nhật.",
+    "disconnect_confirm_description": "Ngắt kết nối {{login}} khỏi không gian làm việc này? Cập nhật cho tài khoản này sẽ dừng. Bản ghi và liên kết PR hiện có được giữ nguyên; các kết nối khác không bị ảnh hưởng.",
     "disconnect_confirm_cancel": "Hủy",
     "disconnect_confirm_action": "Ngắt kết nối",
     "not_configured": "Tích hợp GitHub chưa được cấu hình cho bản triển khai này. Người vận hành phải đặt",
@@ -1042,7 +1042,18 @@
     "feature_auto_link_description": "Liên kết một PR tới công việc mà ID của nó, ví dụ {{example}}, nằm trong tiêu đề hoặc tên nhánh của PR, hoặc đứng sau “Closes” trong mô tả của nó.",
     "status_paused": "Đã tạm dừng",
     "pause": "Tạm dừng tính năng GitHub",
-    "resume": "Tiếp tục tính năng GitHub"
+    "resume": "Tiếp tục tính năng GitHub",
+    "add_account": "Thêm tài khoản hoặc tổ chức",
+    "disconnect_account": "Ngắt kết nối {{login}}",
+    "errors": {
+      "missing_authorization": "GitHub không trả về quyền ủy quyền của người dùng. Thử kết nối lại và hoàn tất ủy quyền. Nếu lỗi lặp lại với một bản cài đặt đã có, hãy nhờ người vận hành Multica hỗ trợ.",
+      "installation_not_authorized": "Với bản cài đặt cá nhân, dùng tài khoản GitHub sở hữu bản cài đặt đó; với tổ chức, dùng tài khoản có quyền quản trị trên mọi repository được ủy quyền. Chọn ít nhất một repository.",
+      "invalid_state": "Yêu cầu kết nối GitHub này đã hết hạn hoặc không hợp lệ. Kết nối lại từ Cài đặt → Code.",
+      "incomplete_callback": "GitHub trả về phản hồi kết nối chưa đầy đủ. Kết nối lại từ Cài đặt → Code.",
+      "bad_workspace": "Không tìm thấy không gian làm việc cho kết nối này. Mở đúng không gian làm việc rồi thử lại từ Cài đặt → Code.",
+      "verification_failed": "Không xác minh được quyền truy cập bản cài đặt GitHub của bạn. Thử kết nối lại; nếu lỗi lặp lại, hãy nhờ người vận hành Multica kiểm tra cấu hình GitHub App.",
+      "persist_failed": "Không lưu được kết nối GitHub. Thử lại từ Cài đặt → Code; nếu lỗi lặp lại, hãy liên hệ người vận hành Multica."
+    }
   },
   "vcs": {
     "section_title": "Git tự host",
@@ -1460,7 +1471,13 @@
       "up_to_date": "Bạn đang ở phiên bản mới nhất.",
       "downloading": "v{{version}} đang tải xuống trong nền — bạn sẽ được thông báo khi nó sẵn sàng cài đặt.",
       "check_now": "Kiểm tra ngay",
-      "checking": "Đang kiểm tra…"
+      "checking": "Đang kiểm tra…",
+      "check_unavailable": "Hiện không kiểm tra được cập nhật. Vui lòng thử lại sau.",
+      "check_network": "Không kết nối được dịch vụ cập nhật. Kiểm tra kết nối rồi thử lại.",
+      "check_failed": "Không kiểm tra được cập nhật. Vui lòng thử lại.",
+      "download_failed": "Tải bản cập nhật thất bại. Bạn vẫn dùng được phiên bản hiện tại, thử lại sau.",
+      "download_ready": "v{{version}} đã sẵn sàng để cài đặt.",
+      "retry": "Thử lại"
     },
     "daemon": {
       "title": "Daemon",
@@ -1694,6 +1711,30 @@
     "mcp": "Được quản trị viên thêm và dùng chung trong không gian làm việc, rồi gán cho từng agent.",
     "apps": "Tài khoản nhóm hoặc cá nhân được kết nối qua Multica và thêm cho từng agent.",
     "plugins": "Các gói đã cài đặt có thể thêm công cụ, hook theo lịch và bộ nhớ lưu trữ, mỗi thứ với quyền riêng."
+  },
+  "weixin": {
+    "section_title": "WeChat",
+    "page_description": "Tin nhắn riêng với tài khoản quét mã QR kết nối.",
+    "loading": "Đang kết nối…",
+    "empty": "Kết nối WeChat từ tab Tích hợp của agent.",
+    "close": "Đóng",
+    "action_failed": "Không hoàn thành được thao tác này. Hãy thử lại.",
+    "privacy_hint": "Quét bằng tài khoản WeChat của chính bạn. Tin nhắn của nó sẽ chạy với tư cách bạn trong không gian làm việc này. Đừng chia sẻ mã QR này.",
+    "qr_label": "Mã QR kết nối WeChat",
+    "scan_hint": "Quét bằng WeChat và xác nhận trên điện thoại.",
+    "scanned": "Đã quét. Xác nhận kết nối trong WeChat.",
+    "verify_hint": "WeChat yêu cầu mã xác minh. Nhập mã hiện trên điện thoại của bạn.",
+    "verify_label": "Mã xác minh",
+    "verify": "Xác minh",
+    "success": "Đã kết nối. Gửi tin nhắn mới cho bot trong WeChat để bắt đầu.",
+    "expired": "Mã QR này đã hết hạn. Tạo mã mới.",
+    "blocked": "WeChat đã chặn các lần thử xác minh tiếp theo. Hãy thử lại sau.",
+    "already_bound": "Bot này đã được liên kết trong WeChat rồi. Ngắt kết nối client trước đó rồi thử lại.",
+    "refresh": "Mã QR mới",
+    "retry": "Thử lại",
+    "already_connected": "Tài khoản WeChat này đã kết nối với {{agent}}. Ngắt kết nối ở đó trước.",
+    "connected_elsewhere": "Tài khoản WeChat này đã kết nối ở nơi khác. Ngắt kết nối hiện có trước.",
+    "authorization_expired": "Ủy quyền WeChat đã hết hạn. Quét lại để kết nối lại."
   },
   "connected_apps": {
     "description": "Tài khoản mà agent của bạn dùng để truy cập ứng dụng bên ngoài. Các thao tác được phép sẽ chạy ngay.",
