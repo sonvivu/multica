@@ -20,7 +20,7 @@
     "title": "Không có lời mời đang chờ",
     "hint": "Tiếp tục để thiết lập không gian làm việc của riêng bạn.",
     "continue": "Tiếp tục thiết lập",
-    "go_to_dashboard": "Đi tới bảng điều khiển"
+    "go_to_dashboard": "Đi tới không gian làm việc"
   },
   "linked": {
     "not_found": "Lời mời này có thể đã hết hạn, bị thu hồi, hoặc không thuộc về tài khoản của bạn.",
@@ -30,6 +30,31 @@
   },
   "errors": {
     "accept_failed": "Không chấp nhận được lời mời",
-    "decline_failed": "Không từ chối được lời mời"
+    "decline_failed": "Không từ chối được lời mời",
+    "member_limit_reached": "{{workspace}} đã đầy. Hãy hỏi người đã mời bạn; bạn có thể tham gia khi không gian làm việc nâng cấp."
+  },
+  "join": {
+    "error_title": "Rất tiếc",
+    "full_description": "Hãy liên hệ người đã mời bạn. Liên kết này dùng lại được khi không gian làm việc nâng cấp.",
+    "full_title": "{{workspace}} đã đầy",
+    "go_home": "Về trang chủ",
+    "invalid": "Liên kết mời này không hợp lệ hoặc đã hết hạn.",
+    "invited_by": "Được mời bởi {{name}}",
+    "join": "Tham gia không gian làm việc",
+    "join_as": "Bạn sẽ tham gia không gian làm việc này với vai trò",
+    "join_failed": "Không tham gia được không gian làm việc. Liên kết có thể đã hết hạn.",
+    "joined_title": "Đã tham gia!",
+    "joining": "Đang tham gia...",
+    "loading": "Đang tải thông tin lời mời...",
+    "log_in_to_join": "Đăng nhập để tham gia",
+    "login_required": "Bạn cần đăng nhập để tham gia không gian làm việc này.",
+    "no_code": "Không tìm thấy mã mời. Hãy dùng liên kết chia sẻ hợp lệ.",
+    "redirecting": "Đang chuyển tới không gian làm việc của bạn...",
+    "retry": "Thử lại",
+    "role_admin": "Quản trị viên",
+    "role_member": "Thành viên",
+    "seats_full": "Mọi ghế thành viên đã mua đều đang được dùng. Hãy nhờ quản trị viên không gian làm việc thêm ghế rồi thử lại.",
+    "seats_unavailable": "Không xác minh được sức chứa thành viên. Hãy thử lại.",
+    "title": "Bạn được mời vào {{workspace}}"
   }
 }

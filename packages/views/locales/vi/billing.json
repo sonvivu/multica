@@ -6,7 +6,8 @@
     "plan": {
       "free": "Miễn phí",
       "pro": "Pro",
-      "unknown": "Gói không xác định"
+      "unknown": "Gói không xác định",
+      "business": "Business"
     },
     "status": {
       "inactive": "Không hoạt động",
@@ -26,19 +27,22 @@
     },
     "actions": {
       "retry": "Thử lại",
-      "retry_autopilots": "Thử tải lại mức sử dụng automation",
-      "upgrade": "Nâng cấp lên Pro",
+      "retry_autopilots": "Thử tải lại mức sử dụng autopilot",
       "manage": "Quản lý thanh toán",
       "add_seats": "Thêm ghế",
       "cancel": "Hủy",
-      "continue_to_stripe": "Tiếp tục tới Stripe"
+      "continue_to_stripe": "Tiếp tục tới Stripe",
+      "check_status": "Kiểm tra trạng thái",
+      "switch_to": "Chuyển sang {{plan}}",
+      "upgrade_to": "Nâng cấp lên {{plan}}",
+      "retry_storage": "Thử lại mức dùng bộ nhớ tệp đính kèm"
     },
     "errors": {
       "action_title": "Thao tác thanh toán thất bại",
       "temporarily_unavailable": "Thanh toán tạm thời không khả dụng. Hãy thử lại sau giây lát.",
       "not_enabled": "Gói đăng ký cho không gian làm việc chưa được bật trên bản triển khai này. Hãy liên hệ quản trị viên của bạn.",
       "permission_changed": "Vai trò của bạn trong không gian làm việc không còn cho phép thao tác này. Hãy làm mới trang để xem quyền truy cập hiện tại.",
-      "checkout_response": "Không mở được trang thanh toán vì phản hồi của máy chủ không đọc được. Hãy thử lại mà không thay đổi chu kỳ đã chọn.",
+      "checkout_response": "Không mở được trang thanh toán do phản hồi bất ngờ. Hãy thử lại.",
       "already_subscribed": "Không gian làm việc này đã có gói đăng ký. Gói hiện tại đã được làm mới.",
       "checkout_failed": "Không tạo được phiên thanh toán. Hãy thử lại sau giây lát.",
       "portal_response": "Không mở được Cổng thanh toán vì phản hồi của máy chủ không đọc được.",
@@ -52,13 +56,13 @@
       "syncing_title": "Đang kích hoạt gói đăng ký của bạn",
       "syncing_description": "Thanh toán đã hoàn tất. Hệ thống đang chờ Stripe xác nhận thay đổi gói.",
       "timeout_description": "Đã nhận thanh toán, nhưng gói đăng ký vẫn đang đồng bộ. Hãy làm mới trang sau giây lát.",
-      "active_title": "Pro đã được kích hoạt",
-      "active_description": "Không gian làm việc này hiện đã có quyền truy cập Pro."
+      "active_title": "{{plan}} đã được kích hoạt",
+      "active_description": "Không gian làm việc này hiện đã có quyền truy cập {{plan}}."
     },
     "past_due": {
       "title": "Thanh toán cần xử lý",
       "description": "Hãy cập nhật phương thức thanh toán trong phần quản lý thanh toán.",
-      "grace_description": "Hãy cập nhật phương thức thanh toán trước {{date}} để giữ quyền truy cập Pro."
+      "grace_description": "Hãy cập nhật phương thức thanh toán trước {{date}} để giữ gói trả phí của bạn."
     },
     "subscription_notice": {
       "canceling_title": "Đã lên lịch hủy",
@@ -67,7 +71,7 @@
       "incomplete_title": "Thiết lập gói đăng ký chưa hoàn tất",
       "incomplete_description": "Mở phần quản lý thanh toán để hoàn tất hoặc xem lại thiết lập thanh toán.",
       "incomplete_expired_title": "Thiết lập gói đăng ký đã hết hạn",
-      "incomplete_expired_description": "Thiết lập thanh toán trước đó đã hết hạn mà chưa kích hoạt Pro. Hãy bắt đầu nâng cấp mới khi sẵn sàng.",
+      "incomplete_expired_description": "Thiết lập thanh toán trước đó đã hết hạn trước khi gói đăng ký bắt đầu. Hãy bắt đầu nâng cấp mới khi sẵn sàng.",
       "paused_title": "Gói đăng ký đã tạm dừng",
       "paused_description": "Mở phần quản lý thanh toán để xem lại việc tạm dừng và các tùy chọn khôi phục.",
       "unpaid_title": "Gói đăng ký chưa thanh toán",
@@ -78,21 +82,40 @@
       "title": "Gói hiện tại",
       "plan": "Gói của không gian làm việc",
       "members": "Thành viên là người",
-      "members_description": "Agent và lời mời đang chờ không được tính là ghế.",
+      "members_description": "Thành viên là người đang hoạt động trong không gian làm việc này. Agent không bao giờ dùng ghế.",
       "member_count_other": "{{count}} thành viên",
       "billing_interval": "Chu kỳ thanh toán",
-      "period_end": "Ngày kết thúc chu kỳ hiện tại"
+      "period_end": "Ngày kết thúc chu kỳ hiện tại",
+      "business_adds": "Business bổ sung dự án riêng tư, quyền truy cập theo thành viên, tài khoản app của nhóm và giới hạn tự động hóa cao hơn.",
+      "change_plan": "Đổi gói",
+      "plan_change_confirming": "Đang chuyển sang {{plan}}. Đang chờ Stripe xác nhận; không đổi được ghế và gói cho tới lúc đó.",
+      "plan_change_hold": "Đổi gói",
+      "plan_change_state_confirming": "Đang xác nhận",
+      "plan_change_state_unresolved": "Cần hỗ trợ",
+      "plan_change_unresolved": "Không xác nhận được việc chuyển sang {{plan}}. Liên hệ hỗ trợ để giải quyết; không đổi được ghế và gói cho tới lúc đó."
     },
     "upgrade": {
-      "title": "Nâng cấp lên Pro",
-      "description": "Chọn chu kỳ thanh toán, sau đó xác nhận số ghế hiện tại và tổng số tiền cuối cùng trong Stripe Checkout.",
+      "title": "Nâng cấp",
       "interval_label": "Chu kỳ thanh toán",
       "monthly": "Hàng tháng",
       "yearly": "Hàng năm",
-      "pro_for_team_other": "Pro cho {{count}} ghế người dùng",
       "price_loading": "Đang tải giá gói đăng ký",
-      "unit_price": "{{price}} cho mỗi ghế người dùng",
-      "price_at_checkout": "Máy chủ sẽ đếm lại số thành viên là người trước khi mua. Stripe Checkout hiển thị giá mỗi ghế và tổng số tiền chính xác trước khi bạn thanh toán."
+      "price_at_checkout": "Số thành viên là người đang hoạt động được đếm tại lúc thanh toán. Stripe hiển thị giá mỗi ghế và tổng số tiền cuối cùng trước khi bạn thanh toán.",
+      "features": {
+        "business_access": "Dự án riêng tư và quyền truy cập theo thành viên",
+        "business_apps": "Tài khoản app của nhóm và quy tắc phê duyệt",
+        "business_autopilots": "3.000 lượt chạy tự động hóa mỗi thành viên mỗi tháng",
+        "business_everything": "Mọi thứ trong Pro",
+        "business_reports": "Báo cáo mức dùng và chi phí theo thành viên",
+        "pro_autopilots": "1.000 lượt chạy tự động hóa mỗi thành viên mỗi tháng",
+        "pro_dashboard": "90 ngày lịch sử dashboard",
+        "pro_members": "Không giới hạn thành viên",
+        "pro_storage": "10 GB dung lượng đính kèm mỗi thành viên"
+      },
+      "recommended": "Được khuyên dùng",
+      "unit_price_month": "{{price}} mỗi ghế người dùng / tháng",
+      "unit_price_year": "{{price}} mỗi ghế người dùng / năm",
+      "unit_price_year_monthly": "{{price}} mỗi ghế người dùng / tháng, thanh toán theo năm"
     },
     "management": {
       "title": "Quản lý gói đăng ký",
@@ -102,17 +125,32 @@
     },
     "limits": {
       "title": "Mức sử dụng và giới hạn",
-      "autopilots": "Lượt chạy automation",
+      "autopilots": "Lượt chạy autopilot",
       "unlimited": "Không giới hạn",
       "per_month": "{{count}} / tháng",
-      "usage_loading": "Đang tải mức sử dụng automation",
-      "usage_label": "Mức dùng hạn mức automation",
+      "usage_loading": "Đang tải mức sử dụng autopilot",
+      "usage_label": "Mức dùng hạn mức autopilot",
       "current_usage": "Mức sử dụng hiện tại",
       "reached": "Đã chạm giới hạn",
       "usage_total": "{{total}} / {{limit}}",
       "usage_breakdown": "{{used}} đã hoàn thành · {{reserved}} đang tiến hành",
       "resets_at": "Đặt lại vào {{date}}",
-      "usage_unavailable": "Mức sử dụng tạm thời không khả dụng"
+      "usage_unavailable": "Mức sử dụng tạm thời không khả dụng",
+      "members": "Thành viên",
+      "members_pending": "Lời mời đang chờ: {{pending}}",
+      "metering": "Lượt chạy từ lịch trình, webhook và agent được tính. Lượt chạy thành viên khởi động bằng Chạy ngay thì không.",
+      "addon": "Lượt chạy bổ sung",
+      "addon_buy": "Mua · {{price}} / {{runs}} lượt chạy",
+      "addon_buy_fallback": "Mua thêm lượt chạy",
+      "addon_description": "Khi hết hạn mức, autopilot tạm dừng đến tháng sau hoặc đến khi bạn mua thêm lượt chạy.",
+      "addon_included": "Bao gồm {{runs}} lượt chạy bổ sung",
+      "addon_none": "Không có trong tháng này",
+      "addon_purchased": "Đã mua {{runs}} trong tháng này",
+      "dashboard_history": "Lịch sử phân tích",
+      "dashboard_history_days": "{{days}} ngày gần đây",
+      "storage": "Bộ nhớ tệp đính kèm",
+      "storage_description": "Tệp đính kèm trong công việc, bình luận và trò chuyện.",
+      "storage_label": "Mức dùng bộ nhớ tệp đính kèm"
     },
     "seats": {
       "title": "Ghế",
@@ -149,7 +187,7 @@
       "preview_failed": "Ước tính tạm thời không khả dụng. Hãy thử lại sau giây lát.",
       "capacity_out_of_sync": "Số ghế trong Stripe không khớp với hồ sơ thanh toán. Hãy liên hệ hỗ trợ trước khi thử mua lại.",
       "in_progress": "Một giao dịch mua ghế khác đang được xử lý. Hãy chờ giao dịch đó hoàn tất; liên hệ hỗ trợ nếu trạng thái này kéo dài.",
-      "purchase_unreadable": "Không đọc được phản hồi mua ghế. Hãy thử lại với báo giá này; cùng một yêu cầu mua sẽ được dùng lại.",
+      "purchase_unreadable": "Không xác nhận được phản hồi mua ghế. Hãy thử lại một cách an toàn — bạn sẽ không bị trừ tiền hai lần.",
       "purchase_failed": "Không thêm được ghế. Hãy thử lại với cùng báo giá, hoặc làm mới nếu báo giá đã hết hạn.",
       "payment_failed": "Không hoàn tất được thanh toán. Hãy cập nhật phương thức thanh toán trong Stripe, rồi yêu cầu báo giá mới.",
       "quote_changed": "Số ghế hoặc ước tính đã thay đổi. Hãy xem lại báo giá đã làm mới trước khi xác nhận lại.",
@@ -164,11 +202,48 @@
       "delayed_description": "Việc kiểm tra tự động đã dừng. Giao dịch mua vẫn có thể hoàn tất; hãy kiểm tra lại sau hoặc liên hệ hỗ trợ trước khi bắt đầu một giao dịch mua khác.",
       "delayed_description_with_expiry": "Việc kiểm tra tự động đã dừng. Nếu lần thử này vẫn đang chờ sau {{date}}, hãy tải lại trang trước khi yêu cầu báo giá khác; liên hệ hỗ trợ nếu nó vẫn ở trạng thái chờ.",
       "submitted_other": "Đã gửi yêu cầu mua {{count}} ghế. Sức chứa mới sẽ xuất hiện sau khi Stripe xác nhận.",
-      "error_title": "Không cập nhật được ước tính"
+      "error_title": "Không cập nhật được ước tính",
+      "plan_change_in_progress": "Đang xử lý đổi gói. Thử lại sau vài phút.",
+      "plan_change_unresolved": "Không xác nhận được việc đổi gói. Liên hệ hỗ trợ trước khi thêm ghế."
     },
     "confirm": {
       "title": "Tiếp tục tới Stripe Checkout?",
-      "description": "Chu kỳ thanh toán: {{interval}}. Số thành viên là người hiện tại: {{count}}. Stripe sẽ đếm lại số ghế và hiển thị tổng số tiền cuối cùng trước khi thanh toán."
+      "description": "Gói: {{plan}}. Chu kỳ thanh toán: {{interval}}. Số thành viên là người hiện tại: {{count}}. Stripe sẽ đếm lại số ghế và hiển thị tổng số tiền cuối cùng trước khi thanh toán.",
+      "held_invite": "Lời mời tới {{email}} kèm thêm một ghế trả phí. Sau khi thanh toán xong, gửi nó từ mục Thanh toán."
+    },
+    "held_invite": {
+      "description": "Bạn đã giữ lại lời mời cho {{email}} với vai trò {{role}} cho tới khi nâng cấp. Gửi ngay bây giờ?",
+      "discard": "Hủy",
+      "role_admin": "quản trị viên",
+      "role_member": "thành viên",
+      "send": "Gửi lời mời",
+      "title": "Không gian làm việc giờ dùng gói {{plan}}"
+    },
+    "plan_change": {
+      "change_in_progress": "Đang xử lý đổi gói. Thử lại sau vài phút.",
+      "charge_today": "Tính hôm nay",
+      "check_failed": "Không kiểm tra được việc đổi gói. Thử lại.",
+      "credit": "Trừ vào hóa đơn tiếp theo",
+      "downgrade_description": "Có hiệu lực ngay. Phần chênh lệch chưa dùng được trừ vào hóa đơn tiếp theo. Cài đặt Business đã cấu hình vẫn hoạt động nhưng chỉ được đọc.",
+      "error_title": "Không đổi được gói",
+      "failed": "Không đổi được gói. Thử lại với cùng báo giá.",
+      "in_progress": "Đang xử lý mua ghế. Thử lại sau khi xong.",
+      "next_invoice": "Lần gia hạn tiếp theo",
+      "not_active": "Gói đăng ký này hiện không đổi gói được. Gói hiện tại đã được làm mới.",
+      "payment_failed": "Không hoàn tất được thanh toán. Cập nhật phương thức thanh toán trong quản lý thanh toán rồi thử lại.",
+      "preview_failed": "Tạm thời không có báo giá. Thử lại sau giây lát.",
+      "preview_loading": "Đang tải báo giá…",
+      "quote_changed": "Gói đăng ký hoặc giá đã thay đổi. Xem lại báo giá đã làm mới trước khi xác nhận lại.",
+      "rate_limited": "Quá nhiều yêu cầu báo giá. Chờ giây lát rồi thử lại.",
+      "seats": "Ghế",
+      "success_description": "Không gian làm việc này giờ dùng gói {{plan}}.",
+      "success_title": "Đã đổi gói",
+      "tax_notice": "Stripe quyết định thuế, khoản trừ và chi tiết hóa đơn cuối cùng.",
+      "unreadable": "Không đọc được phản hồi. Thử lại; yêu cầu cũ sẽ được dùng lại.",
+      "unresolved": "Không xác nhận được lần đổi gói trước. Liên hệ hỗ trợ trước khi đổi gói.",
+      "upgrade_description": "Có hiệu lực ngay. Phần chênh lệch của kỳ thanh toán còn lại sẽ được tính ngay.",
+      "addon_downgrade_notice": "Sau khi chuyển, hạn mức tháng này thành {{limit}} lượt chạy, kể cả lượt chạy bạn đã mua. Tháng này đã dùng {{used}} lượt chạy.",
+      "addon_downgrade_notice_limit_only": "Sau khi chuyển, hạn mức tháng này thành {{limit}} lượt chạy, kể cả lượt chạy bạn đã mua."
     }
   },
   "return_page": {
@@ -184,6 +259,114 @@
     "read_only": "Chỉ đọc. Nâng cấp để chỉnh sửa.",
     "unavailable": "Không nằm trong gói của không gian làm việc này.",
     "view_plans": "Xem các gói",
-    "locked_error": "Tính năng này không nằm trong gói của không gian làm việc. Các cài đặt hiện có vẫn hoạt động; nâng cấp để thêm mới."
+    "locked_error": "Tính năng này không nằm trong gói của không gian làm việc. Các cài đặt hiện có vẫn hoạt động; nâng cấp để thêm mới.",
+    "ask_admin": "Nhờ quản trị viên của không gian làm việc nâng cấp lên Business.",
+    "badge_label": "Tính năng Business. Xem chi tiết",
+    "business": "Business",
+    "upgrade_card": {
+      "agent_invocation_members": {
+        "description": "\"Chỉ mình tôi\" và \"Toàn bộ không gian làm việc\" vẫn khả dụng trên mọi gói.",
+        "title": "Cho phép người cụ thể chạy agent là tính năng Business"
+      },
+      "runtime_member_sharing": {
+        "description": "\"Riêng tư\" và \"Công khai\" vẫn khả dụng trên mọi gói.",
+        "title": "Chia sẻ runtime với thành viên cụ thể là tính năng Business"
+      }
+    },
+    "upgrade_to_add": "Nâng cấp để thêm",
+    "upgrade_to_business": "Nâng cấp lên Business"
+  },
+  "trial": {
+    "card": {
+      "badge_other": "Dùng thử · còn {{count}} ngày",
+      "choose_plan": "Chọn gói",
+      "description": "Dùng thử tới {{date}}. Không có phương thức thanh toán nào được lưu, nên sau đó không gian làm việc chuyển sang gói Miễn phí và không bị tính phí.",
+      "ended_description": "Dùng thử đã kết thúc vào {{date}}. Chọn một gói bên dưới để lấy lại tính năng Business.",
+      "ended_description_member": "Dùng thử đã kết thúc vào {{date}}. Nhờ quản trị viên không gian làm việc nâng cấp để lấy lại tính năng Business.",
+      "ended_title": "Dùng thử Business đã kết thúc",
+      "ends": "Kết thúc {{date}}",
+      "progress": "Ngày {{day}} trên {{total}}",
+      "started": "Bắt đầu {{date}}",
+      "title": "Dùng thử Business"
+    },
+    "ended": {
+      "autopilot": "Tự động hóa có {{limit}} lượt chạy mỗi tháng; tháng này đã dùng {{used}}.",
+      "autopilot_paused": "Tự động hóa có {{limit}} lượt chạy mỗi tháng và tháng này đã dùng {{used}}, nên chúng tạm dừng tới {{date}}.",
+      "description": "{{workspace}} giờ dùng gói Miễn phí. Không có gì bị xóa.",
+      "description_without_name": "Không gian làm việc này giờ dùng gói Miễn phí. Không có gì bị xóa.",
+      "keep_free": "Tiếp tục dùng Miễn phí",
+      "kept": "Thành viên, dự án và cài đặt bạn đã có vẫn giữ nguyên.",
+      "member_description": "Cài đặt hiện có vẫn hoạt động. Hỏi quản trị viên không gian làm việc nếu bạn cần thêm.",
+      "member_title": "Không gian làm việc này giờ dùng gói Miễn phí",
+      "private_projects": "Dự án riêng tư vẫn riêng tư. Danh sách truy cập của chúng chỉ được đọc cho tới khi bạn nâng cấp.",
+      "title": "Dùng thử Business của bạn đã kết thúc",
+      "upgrade": "Nâng cấp lên Business"
+    },
+    "features": {
+      "description": "Khi hết dùng thử, không có gì bị xóa hay tắt; bạn chỉ không thêm được nữa.",
+      "guests": {
+        "after": "Khách hiện có vẫn giữ quyền truy cập sau dùng thử. Khách mới cần Pro hoặc Business.",
+        "name": "Khách"
+      },
+      "private_projects": {
+        "after": "Vẫn riêng tư sau dùng thử. Danh sách truy cập của chúng trở thành chỉ đọc.",
+        "name": "Dự án riêng tư"
+      },
+      "title": "Tính năng Business trong bản dùng thử của bạn"
+    },
+    "reminder": {
+      "body": "Vào {{date}} không gian làm việc này chuyển sang gói Miễn phí. Chọn một gói để giữ Business.",
+      "choose_plan": "Chọn gói",
+      "days_left_title_other": "Còn {{count}} ngày trong bản dùng thử Business của bạn.",
+      "halfway_title_other": "Dùng thử Business của bạn đã đi được nửa chặng: còn {{count}} ngày.",
+      "last_day_title": "Dùng thử Business của bạn kết thúc trong vòng một ngày.",
+      "later": "Để sau"
+    },
+    "status": {
+      "active": "Dùng thử Business",
+      "active_label_other": "Dùng thử Business, còn {{count}} ngày. Mở mục Thanh toán.",
+      "days_left_other": "Còn {{count}} ngày",
+      "ended_label": "Dùng thử Business đã kết thúc và không gian làm việc này đang dùng gói Miễn phí. Mở mục Thanh toán để nâng cấp.",
+      "ending": "sắp hết",
+      "ending_label": "Dùng thử Business sắp hết. Mở mục Thanh toán.",
+      "free": "Miễn phí",
+      "upgrade": "Nâng cấp"
+    },
+    "welcome": {
+      "action": "Xem những gì được bao gồm",
+      "body": "Dự án riêng tư và các tính năng Business khác đã bật. Không cần thẻ; không gian làm việc chuyển sang gói Miễn phí khi hết dùng thử.",
+      "close": "Bỏ qua",
+      "title_other": "Chào mừng! Không gian làm việc này có bản dùng thử Business miễn phí {{count}} ngày"
+    }
+  },
+  "autopilot_addon": {
+    "cancel": "Hủy",
+    "cancel_description": "Không bị trừ tiền.",
+    "cancel_title": "Đã hủy thanh toán",
+    "confirming_description": "Lượt chạy được cộng ngay khi Stripe xác nhận thanh toán. Lát nữa kiểm tra mức sử dụng bên dưới.",
+    "confirming_title": "Đang xác nhận thanh toán",
+    "conflict": "Hiện không mua được lượt chạy bổ sung, hoặc giá đã thay đổi. Xem lại các lựa chọn rồi thử lại.",
+    "description": "Lượt chạy bổ sung có hiệu lực trong tháng này và dùng chung cho mọi người trong không gian làm việc. Hạn mức của gói được dùng trước.",
+    "error": "Không mở được trang thanh toán. Thử lại.",
+    "loading": "Đang tải giá lượt chạy bổ sung...",
+    "not_paid_description": "Không bị trừ tiền và không có lượt chạy nào được cộng.",
+    "not_paid_title": "Chưa hoàn tất thanh toán",
+    "option": "{{runs}} lượt chạy",
+    "options_label": "Số lượt chạy",
+    "pay": "Tiếp tục thanh toán {{amount}}",
+    "pay_fallback": "Tiếp tục đến trang thanh toán",
+    "success_description": "Đã cộng {{runs}} lượt chạy cho tháng này. Autopilot sẽ chạy lại từ lượt tiếp theo.",
+    "success_title": "Đã cộng lượt chạy",
+    "title": "Mua thêm lượt chạy autopilot",
+    "unavailable": "Không gian làm việc này hiện không mua được lượt chạy bổ sung.",
+    "usage_summary": "Đã dùng {{used}} / {{limit}} trong tháng này, đặt lại vào {{date}}."
+  },
+  "storage_limit": {
+    "admin_body": "Bộ nhớ tệp đính kèm đã đầy ({{used}} / {{limit}}). Các tệp đính kèm hiện có không bị ảnh hưởng.",
+    "admin_body_no_figures": "Bộ nhớ tệp đính kèm đã đầy. Các tệp đính kèm hiện có không bị ảnh hưởng.",
+    "copy_title": "Không tạo được công việc con: không sao chép được tệp đính kèm gốc",
+    "dismiss": "Bỏ qua",
+    "member_body": "Bộ nhớ tệp đính kèm đã đầy. Nhờ quản trị viên nâng cấp gói, hoặc xóa các tệp đính kèm không còn cần.",
+    "title": "Không tải lên được {{filename}}"
   }
 }

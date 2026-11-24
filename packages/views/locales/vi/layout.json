@@ -5,14 +5,16 @@
     "my_issues": "Công việc của tôi",
     "issues": "Công việc",
     "projects": "Dự án",
-    "autopilots": "Autopilot",
+    "autopilots": "Autopilots",
     "agents": "Agent",
     "squads": "Squad",
     "usage": "Phân tích",
     "runtimes": "Runtime",
     "skills": "Skills",
     "settings": "Cài đặt",
-    "views": "Chế độ xem"
+    "views": "Chế độ xem",
+    "docs": "Tài liệu",
+    "apps": "Ứng dụng"
   },
   "tab": {
     "issue": "Công việc",
@@ -27,7 +29,10 @@
     "attachment": "Tệp đính kèm",
     "create_agent": "Tạo Agent",
     "my_agents": "Việc của các agent của tôi",
-    "unknown": "Trang không xác định"
+    "unknown": "Trang không xác định",
+    "doc": "Tài liệu",
+    "docFolder": "Thư mục",
+    "app": "Ứng dụng"
   },
   "help": {
     "trigger": "Trợ giúp",
@@ -96,7 +101,7 @@
   },
   "rail": {
     "label": "Điều hướng ứng dụng",
-    "sheet_description": "Chuyển đổi không gian và không gian làm việc.",
+    "sheet_description": "Chuyển đổi chế độ xem và không gian làm việc.",
     "work": "Công việc",
     "team": "Nhóm",
     "chat": "Trò chuyện",
@@ -116,7 +121,8 @@
     "mark_all_read_failed": "Không đánh dấu tất cả là đã đọc được",
     "reset_order": "Đặt lại thứ tự mặc định",
     "copy_workspace_link": "Sao chép liên kết không gian làm việc",
-    "workspace_meta_other": "{{slug}} · {{count}} thành viên"
+    "workspace_meta_other": "{{slug}} · {{count}} thành viên",
+    "docs": "Tài liệu"
   },
   "bottom_bar": {
     "label": "Thanh trạng thái",
@@ -168,8 +174,6 @@
       "view_delete": "Xóa chế độ xem",
       "new_issue_here": "Công việc mới trong dự án này",
       "inbox_actions": "Thao tác Hộp thư đến",
-      "inbox_view_snoozed": "Xem tạm ẩn",
-      "inbox_view_archived": "Xem đã lưu trữ",
       "inbox_empty": "Không có thông báo",
       "inbox_settings": "Hiển thị Hộp thư đến",
       "inbox_all": "Tất cả thông báo",
@@ -184,16 +188,20 @@
       "pinned_settings": "Hiển thị đã ghim",
       "views_settings": "Hiển thị chế độ xem",
       "views_builtin": "Chế độ xem có sẵn",
-      "views_show_count": "Số lượng"
+      "views_show_count": "Số lượng",
+      "guest_badge": "Khách",
+      "guest_badge_hint": "Bạn có thể xem và bình luận trên các dự án được chia sẻ với bạn.",
+      "involved": "Tham gia",
+      "shared_projects": "Được chia sẻ với bạn"
     },
     "team": {
       "new_agent": "Agent mới",
       "needs_attention": "Cần chú ý",
-      "stuck_other": "{{count}} tác vụ đang chờ runtime ngoại tuyến",
+      "stuck_other": "{{count}} lần chạy đang chờ runtime ngoại tuyến",
       "working_now": "Đang làm việc",
       "show_more_agents": "Hiển thị thêm {{count}} agent…",
       "show_fewer_agents": "Hiển thị ít hơn",
-      "running_tasks_other": "{{count}} tác vụ đang chạy",
+      "running_tasks_other": "{{count}} lần chạy đang tiến hành",
       "all_agents": "Tất cả agent",
       "my_agents": "Agent của tôi",
       "squads_and_members": "Squad và thành viên",

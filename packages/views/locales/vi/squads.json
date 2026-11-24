@@ -108,7 +108,7 @@
   },
   "profile_card": {
     "unavailable": "Squad không khả dụng",
-    "detail_link": "Chi tiết →",
+    "detail_link": "Xem chi tiết →",
     "archived": "Đã lưu trữ",
     "member_count_other": "{{count}} thành viên",
     "members_section": "Thành viên",

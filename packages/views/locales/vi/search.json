@@ -21,7 +21,8 @@
     "workspaces": "Không gian làm việc",
     "new": "Mới",
     "best_match": "Khớp nhất",
-    "actions": "Hành động"
+    "actions": "Hành động",
+    "docs": "Tài liệu"
   },
   "context": {
     "current_issue": "Công việc hiện tại",
@@ -134,7 +135,7 @@
   },
   "delegate": {
     "row": "Giao cho agent: “{{prompt}}”",
-    "hint": "Tạo nhanh"
+    "hint": "Tạo bằng agent"
   },
   "best": {
     "assign": "Giao {{subject}} cho {{name}}",
@@ -160,5 +161,6 @@
   },
   "trigger": {
     "label": "Tìm kiếm..."
-  }
+  },
+  "untitled_doc": "Chưa có tiêu đề"
 }
