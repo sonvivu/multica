@@ -111,13 +111,10 @@
     "group_agent": "Agent",
     "group_label": "Nhóm bảng xếp hạng theo",
     "group_squad": "Squad",
-    "header_squad": "Squad / Phân bổ",
+    "header_squad": "Squad",
     "squad_caption": "{{count}} squad",
-    "squad_caption_with_standalone": "{{count}} squad · gồm cả agent độc lập",
     "squad_members_count": "{{count}} thành viên tham gia",
     "squad_members_title": "Chi tiết thành viên của {{name}}",
-    "standalone_agents": "Agent độc lập (không thuộc squad)",
-    "standalone_agents_hint": "Nhắc @ trực tiếp hoặc giao việc · {{count}} agent",
     "toggle_squad_members": "Hiện/ẩn thành viên của {{name}}"
   },
   "empty": {

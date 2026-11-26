@@ -92,6 +92,10 @@ export const WHATS_NEW_RELEASES: CompleteWhatsNewRelease[] = [
             title: "Задача может ждать другие",
             body: "В меню задачи выберите «Связи → Ждать другую задачу» или добавьте связь в разделе «Связи» на боковой панели. Когда эти задачи завершатся, назначенный агент начнёт работу сам, а назначенный человек получит уведомление.",
           },
+          vi: {
+            title: "Để công việc chờ các công việc khác",
+            body: "Trong menu của một công việc, chọn Quan hệ → Chờ công việc khác, hoặc thêm một quan hệ trong mục Quan hệ ở thanh bên của nó. Khi các công việc đó kết thúc, agent được giao sẽ tự bắt đầu, còn người được giao sẽ nhận được thông báo.",
+          },
         },
       },
       {
@@ -131,6 +135,10 @@ export const WHATS_NEW_RELEASES: CompleteWhatsNewRelease[] = [
             title: "Участники команды передают работу напрямую",
             body: "Если вы управляете командой, откройте её и в разделе «Совместная работа» выберите «Участники передают напрямую». Участники будут передавать задачу друг другу, а лидер подключится, только если достигнут лимит или запуск завершился ошибкой.",
           },
+          vi: {
+            title: "Để thành viên squad bàn giao trực tiếp cho nhau",
+            body: "Nếu bạn quản lý một squad, hãy mở squad đó và đặt Cộng tác thành Thành viên bàn giao trực tiếp. Sau đó các thành viên sẽ chuyển công việc cho nhau, và trưởng nhóm chỉ can thiệp khi đạt tới giới hạn hoặc một lượt chạy thất bại.",
+          },
         },
       },
       {
@@ -169,6 +177,10 @@ export const WHATS_NEW_RELEASES: CompleteWhatsNewRelease[] = [
           ru: {
             title: "Меняйте время напоминания",
             body: "В чате откройте «Напоминания» с полосы над полем ввода или по значку будильника в заголовке, затем нажмите на часы рядом с напоминанием, чтобы изменить время.",
+          },
+          vi: {
+            title: "Đổi thời điểm wakeup quay lại kiểm tra",
+            body: "Trong một cuộc trò chuyện, mở Wakeups từ dải phía trên hộp nhắn tin hoặc từ đồng hồ báo thức ở tiêu đề, rồi bấm vào đồng hồ bên cạnh một wakeup để đổi thời điểm của nó.",
           },
         },
       },

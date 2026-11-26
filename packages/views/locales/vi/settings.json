@@ -933,7 +933,7 @@
         "label": "Bao gồm trả lời trò chuyện"
       },
       "squad_handoffs": {
-        "description": "Bình luận mà trưởng squad và các agent dùng để chuyển việc cho nhau. Các lượt @nhắc bạn, lượt chạy agent thất bại và trạng thái cần chú ý vẫn sẽ đến.",
+        "description": "Bình luận mà trưởng squad và các agent dùng để chuyển việc cho nhau. Các lượt @nhắc bạn, lượt chạy agent thất bại và báo cáo squad hoàn thành vẫn sẽ đến.",
         "label": "Bao gồm bàn giao của squad"
       }
     },
@@ -1907,7 +1907,8 @@
       "pending": "Đang chờ",
       "approved": "Đã duyệt",
       "rejected": "Bị từ chối",
-      "rate_limited": "Bị giới hạn tần suất"
+      "rate_limited": "Bị giới hạn tần suất",
+      "quota_exceeded": "Đã đạt giới hạn tháng"
     },
     "scopes": {
       "team": "Tài khoản nhóm",
@@ -2125,8 +2126,6 @@
         "workflow_automation": "Tự động hóa quy trình"
       },
       "categories_label": "Danh mục",
-      "categories_nav": "Danh mục ứng dụng",
-      "category_all": "Tất cả",
       "category_curated": "Nổi bật",
       "connect": "Kết nối",
       "connect_key": "Dùng API key",
@@ -2139,6 +2138,8 @@
       "popular": "Phổ biến trong {{workspace}}",
       "reconnect": "Kết nối lại",
       "retry": "Thử lại",
+      "catalog": "Danh mục",
+      "catalog_failed": "Không tải được danh mục ứng dụng.",
       "scope_both": "Tài khoản nhóm và tài khoản cá nhân",
       "scope_personal": "Tài khoản cá nhân",
       "scope_team": "Tài khoản nhóm",

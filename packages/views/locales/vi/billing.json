@@ -35,7 +35,8 @@
       "check_status": "Kiểm tra trạng thái",
       "switch_to": "Chuyển sang {{plan}}",
       "upgrade_to": "Nâng cấp lên {{plan}}",
-      "retry_storage": "Thử lại mức dùng bộ nhớ tệp đính kèm"
+      "retry_storage": "Thử lại mức dùng bộ nhớ tệp đính kèm",
+      "retry_app_calls": "Thử tải lại mức dùng lượt gọi app"
     },
     "errors": {
       "action_title": "Thao tác thanh toán thất bại",
@@ -150,7 +151,13 @@
       "dashboard_history_days": "{{days}} ngày gần đây",
       "storage": "Bộ nhớ tệp đính kèm",
       "storage_description": "Tệp đính kèm trong công việc, bình luận và trò chuyện.",
-      "storage_label": "Mức dùng bộ nhớ tệp đính kèm"
+      "storage_label": "Mức dùng bộ nhớ tệp đính kèm",
+      "app_calls": "Lượt gọi app",
+      "app_calls_by_member": "Lượt gọi app theo từng người",
+      "app_calls_description": "Các lượt gọi mà agent thực hiện trong các app đã kết nối. Tìm công cụ không tính.",
+      "app_calls_former_member": "Thành viên cũ",
+      "app_calls_label": "Mức dùng lượt gọi app",
+      "app_calls_no_person": "Lượt chạy tự động"
     },
     "seats": {
       "title": "Ghế",

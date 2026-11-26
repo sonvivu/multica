@@ -784,7 +784,9 @@
       "cancel_failed_toast": "Hủy lượt chạy thất bại",
       "started_prefix": "Bắt đầu {{when}}",
       "dispatched_prefix": "Đã điều phối {{when}}",
-      "queued_prefix": "Đã xếp hàng {{when}}"
+      "queued_prefix": "Đã xếp hàng {{when}}",
+      "source_doc": "Tài liệu",
+      "source_doc_comment": "Bình luận trong tài liệu"
     },
     "connected_apps": {
       "loading": "Đang tải ứng dụng…",
@@ -991,7 +993,8 @@
     "context_receipt_package": "Gói",
     "context_receipt_instruction_file_bytes": "File hướng dẫn: {{size}}",
     "context_receipt_skill_package_bytes": "Gói skill: {{size}}",
-    "context_receipt_other_file_bytes": "File khác: {{size}}"
+    "context_receipt_other_file_bytes": "File khác: {{size}}",
+    "trigger_doc_comment": "Từ bình luận trong tài liệu"
   },
   "task_failure": {
     "cancelled_by_system": "Bị hệ thống hủy",
@@ -1003,6 +1006,7 @@
       "runtime_recovery": "Daemon đã khởi động lại",
       "runtime_access_revoked": "Quyền truy cập runtime đã bị thu hồi",
       "timeout": "Lượt chạy quá thời gian",
+      "cleanup_unconfirmed": "Không xác nhận được tiến trình agent đã dừng",
       "iteration_limit": "Chạm giới hạn số vòng lặp",
       "agent_blocked": "Đang chờ thông tin từ con người",
       "api_invalid_request": "Bị API của model từ chối",
@@ -1034,7 +1038,8 @@
       "codex_semantic_inactivity": "Codex ngừng tiến triển",
       "manual": "Bị người dùng hủy",
       "user_cancelled": "Bị người dùng hủy",
-      "local_directory_missing": "Thư mục cục bộ của dự án không còn tồn tại"
+      "local_directory_missing": "Thư mục cục bộ của dự án không còn tồn tại",
+      "cleanup_blocked": "Lượt chạy trước có thể vẫn đang hoạt động; hãy chạy lại thủ công"
     }
   },
   "last_active": {

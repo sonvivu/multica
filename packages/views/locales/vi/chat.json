@@ -90,7 +90,7 @@
       "runtime_missing_executable": "Không chạy được CLI của agent trên máy này. Hãy kiểm tra xem nó đã được cài đặt đúng và có trong PATH chưa, rồi thử lại.",
       "runtime_version_unsupported": "CLI của agent quá cũ so với runtime này. Hãy nâng cấp nó, rồi thử lại.",
       "fallback": "Đã xảy ra lỗi và agent không thể hoàn thành câu trả lời. Hãy thử lại.",
-      "local_directory_missing": "Thư mục cục bộ liên kết với dự án này không còn tồn tại trên máy đang chạy agent, nên lần chạy chưa bao giờ bắt đầu. Hãy khôi phục thư mục, rồi thử lại. Để dùng thư mục khác, mở Tài nguyên → Thư mục cục bộ trong dự án bằng ứng dụng desktop trên máy đó và liên kết tại đó — trình duyệt không chọn được thư mục."
+      "local_directory_missing": "Thư mục cục bộ liên kết với dự án này không còn tồn tại trên máy đang chạy agent, nên lần chạy chưa bao giờ bắt đầu. Hãy khôi phục thư mục, rồi thử lại. Để dùng thư mục khác, mở dự án bằng ứng dụng desktop trên máy đó, gỡ thư mục cũ khỏi Tài nguyên rồi thêm thư mục mới bằng Thêm → Thư mục cục bộ... — trình duyệt không chọn được thư mục."
     },
     "tools_other": "{{count}} công cụ",
     "tool_result_named": "Kết quả {{tool}}: ",
@@ -272,7 +272,6 @@
     "panel_title": "Wakeup",
     "panel_empty": "Không có wakeup nào trong cuộc trò chuyện này",
     "panel_ended": "Đã kết thúc gần đây",
-    "limits_hint": "Mọi wakeup đều kết thúc: thời gian chờ mặc định là 24 giờ, tối đa 7 ngày. Nếu tới hạn trước, agent quay lại một lần để báo tình hình.",
     "strip_waiting": "Đang chờ: {{title}}",
     "card": "Sẽ báo cáo lại: {{title}}",
     "ends": "kết thúc {{relative}}",
@@ -313,6 +312,14 @@
       "generic": "Báo cáo lại"
     },
     "queue_label": "Wakeup: {{title}}",
-    "queue_fallback": "Wakeup"
+    "queue_fallback": "Wakeup",
+    "change_timing": "Đổi thời gian",
+    "timing_check_limit": "Tối đa {{max}} lần kiểm tra",
+    "timing_custom": "Tùy chỉnh",
+    "timing_deadline": "Đến",
+    "timing_failed": "Không đổi được thời gian",
+    "timing_interval": "Mỗi",
+    "timing_keep": "Giữ nguyên",
+    "timing_reminder": "Nhắc"
   }
 }

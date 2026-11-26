@@ -25,6 +25,7 @@
     "message": "Tin nhắn của agent",
     "error": "Lỗi",
     "waiting_result": "Đang chờ kết quả của công cụ...",
+    "reply_pending_call": "Vẫn đang chạy: đang chờ {{step}} hoàn thành",
     "supplement_failure_turn_ended": "lần chạy đã kết thúc trước khi gửi được",
     "supplement_failure_turn_not_started": "agent chưa sẵn sàng",
     "supplement_failure_provider_rejected": "agent đã từ chối tin nhắn",
@@ -189,7 +190,7 @@
     "section_project": "Dự án",
     "section_project_status": "Trạng thái dự án",
     "section_label": "Nhãn",
-    "section_relation": "Quan hệ với tôi",
+    "section_relation": "Mối liên hệ",
     "relation_assigned": "Được giao cho tôi",
     "relation_created": "Do tôi tạo",
     "relation_my_agents": "Công việc của các agent của tôi",
@@ -273,7 +274,8 @@
     "advanced_group_match_trailing": "trong số này",
     "advanced_group_hint": "Các điều kiện trong nhóm này được nối bằng “{{word}}”",
     "advanced_add_to_group": "Thêm vào nhóm",
-    "advanced_turn_into_group": "Chuyển thành nhóm"
+    "advanced_turn_into_group": "Chuyển thành nhóm",
+    "relation_blocked": "Bị chặn"
   },
   "display": {
     "tooltip": "Cài đặt hiển thị",
@@ -594,18 +596,24 @@
     "pull_requests_empty_title": "Không có pull request nào được liên kết.",
     "guest_readonly_note": "Khách có thể xem và bình luận, nhưng không thể thay đổi thuộc tính công việc.",
     "add_row": {
-      "all": "Thêm wakeup, pull request hoặc môi trường",
       "environments": "Thêm môi trường",
       "menu": {
         "environments": "Môi trường",
         "pull_requests": "Pull request",
-        "wakeups": "Wakeup"
+        "wakeups": "Wakeup",
+        "relations": "Quan hệ"
       },
       "pull_requests": "Thêm pull request",
-      "pull_requests_environments": "Thêm pull request hoặc môi trường",
       "wakeups": "Thêm wakeup",
-      "wakeups_environments": "Thêm wakeup hoặc môi trường",
-      "wakeups_pull_requests": "Thêm wakeup hoặc pull request"
+      "many": "Thêm...",
+      "noun": {
+        "environments": "môi trường",
+        "pull_requests": "pull request",
+        "relations": "quan hệ",
+        "wakeups": "wakeup"
+      },
+      "pair": "Thêm {{first}} hoặc {{second}}",
+      "relations": "Thêm quan hệ"
     },
     "footer": {
       "created": "Tạo bởi {{creator}} · {{date}}",
@@ -681,7 +689,14 @@
     "task_completed_single": "đã hoàn thành một lần chạy",
     "task_failed_single": "lần chạy thất bại",
     "wakeup_child_done_all_single": "Công việc con đã hoàn thành",
-    "wakeup_child_done_stage_single": "Công việc con của giai đoạn {{stage}} đã hoàn thành"
+    "wakeup_child_done_stage_single": "Công việc con của giai đoạn {{stage}} đã hoàn thành",
+    "squad_handoff_human": "đã nhờ {{name}} quyết định",
+    "squad_handoff_leader": "đã bàn giao lại cho {{name}}",
+    "squad_handoff_reason_daily_limit": "Đã chạm giới hạn bàn giao trong ngày",
+    "squad_handoff_reason_round_limit": "Đã chạm giới hạn {{limit}} vòng",
+    "squad_handoff_reason_run_failed": "lượt chạy thất bại",
+    "squad_handoff_round": "vòng {{round}}",
+    "squad_handoff_to": "đã bàn giao cho {{name}}"
   },
   "comment": {
     "add_reaction": "Thêm biểu cảm",
@@ -845,7 +860,8 @@
     "transcript_button": "Xem bản ghi",
     "stop_button": "Dừng",
     "stop_tooltip": "Dừng agent",
-    "cancel_failed": "Dừng lần chạy thất bại"
+    "cancel_failed": "Dừng lần chạy thất bại",
+    "is_working_round": "{{label}} · vòng {{round}}"
   },
   "execution_log": {
     "latest": "Mới nhất",
@@ -1060,7 +1076,9 @@
     "add_sub_issue": "Thêm công việc con...",
     "delete_issue": "Xóa công việc",
     "mark_duplicate": "Đánh dấu trùng lặp...",
-    "open_in_new_window": "Mở trong cửa sổ mới"
+    "open_in_new_window": "Mở trong cửa sổ mới",
+    "add_blocker": "Chờ một công việc khác...",
+    "add_blocking": "Chặn một công việc khác..."
   },
   "pickers": {
     "custom_property": {
@@ -1363,6 +1381,7 @@
       "cancel": "Hủy",
       "error": "Không thể tạo wakeup. Hãy kiểm tra cài đặt và thử lại.",
       "capacity_error": "Công việc hoặc không gian làm việc này đã đạt số wakeup đang bật tối đa.",
+      "agent_error": "Bạn không thể chạy agent này. Hãy xin chủ sở hữu cấp quyền truy cập, hoặc chọn một agent khác.",
       "missing_condition": "Hãy chọn một điều kiện.",
       "missing_agent": "Hãy chọn một agent để đánh thức.",
       "missing_events": "Hãy chọn ít nhất một sự kiện.",
@@ -1927,7 +1946,8 @@
       "pending": "Đang chờ",
       "approved": "Đã duyệt",
       "rejected": "Đã từ chối",
-      "rate_limited": "Bị giới hạn tốc độ"
+      "rate_limited": "Bị giới hạn tốc độ",
+      "quota_exceeded": "Đã đạt giới hạn tháng"
     }
   },
   "environments": {
@@ -2046,5 +2066,38 @@
     "viewing_other": "{{count}} người đang xem",
     "watching": "Đang xem",
     "where": "Trong \"{{section}}\""
+  },
+  "relations": {
+    "add": "Thêm quan hệ",
+    "add_blocker_hint": "Công việc này bắt đầu sau khi công việc kia xong",
+    "add_blocking_hint": "Công việc kia bắt đầu sau khi công việc này xong",
+    "block_title": "Chặn một công việc khác",
+    "blocked_by": "Bị chặn bởi",
+    "blocking": "Đang chặn",
+    "blocking_picker_hint": "Chọn một công việc chưa thể bắt đầu cho đến khi công việc này xong.",
+    "mark_duplicate_hint": "Hủy công việc này",
+    "stage_tag": "Giai đoạn",
+    "stage_tag_hint": "Do các giai đoạn của công việc cha đặt",
+    "title": "Quan hệ",
+    "wait_title": "Chờ một công việc khác"
+  },
+  "waiting": {
+    "count": "Đang chờ {{count}} công việc",
+    "count_other": "Đang chờ {{count}} công việc",
+    "ended": "Các công việc đang chờ đã xong",
+    "hint": "Sau khi các công việc này xong, người được giao sẽ tự động bắt đầu hoặc nhận được thông báo.",
+    "hint_backlog": "Công việc này đang ở Backlog nên sẽ không tự bắt đầu khi các công việc kia xong. Nó bắt đầu khi rời khỏi Backlog.",
+    "marker_auto_start": "{{name}} sẽ tự động bắt đầu khi các công việc này xong.",
+    "marker_ended": "{{finished}}/{{total}} đã xong",
+    "marker_more": "thêm {{count}}",
+    "marker_more_other": "thêm {{count}}",
+    "marker_notify": "{{name}} sẽ được thông báo khi các công việc này xong.",
+    "marker_title": "Bị chặn bởi {{count}} công việc",
+    "marker_title_other": "Bị chặn bởi {{count}} công việc",
+    "marker_unassigned": "Chưa có người được giao nên không có gì bắt đầu khi các công việc này xong.",
+    "marker_unavailable": "{{name}} hiện không thể chạy nên không có gì bắt đầu khi các công việc này xong.",
+    "picker_hint": "Chọn một công việc phải xong trước khi công việc này bắt đầu.",
+    "remove": "Gỡ {{identifier}}",
+    "restricted": "{{count}} điều kiện tiên quyết bị giới hạn"
   }
 }

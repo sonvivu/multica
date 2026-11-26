@@ -82,7 +82,9 @@
     "more_actions": "Thêm thao tác với thông báo",
     "open_app": "Mở ứng dụng",
     "open_doc": "Mở tài liệu",
-    "restore": "Chuyển lại vào Hộp thư đến"
+    "restore": "Chuyển lại vào Hộp thư đến",
+    "app_tool_calls_quota_action": "Quản lý thanh toán",
+    "app_tool_calls_quota_exceeded_body": "Không gian làm việc này đã dùng hết {{limit}} lượt gọi app trong tháng này. Agent không thể chạy công cụ của app cho đến khi hạn mức được đặt lại {{resetAt}}, hoặc cho đến khi không gian làm việc nâng cấp hoặc thêm ghế."
   },
   "types": {
     "issue_assigned": "Đã giao",
@@ -114,7 +116,9 @@
     "app_connect_requested": "Kết nối một ứng dụng",
     "app_action_result": "Kết quả thao tác ứng dụng",
     "doc_comment": "Bình luận mới trên tài liệu",
-    "doc_mentioned": "Được nhắc đến trong tài liệu"
+    "doc_mentioned": "Được nhắc đến trong tài liệu",
+    "app_tool_calls_quota_exceeded": "Đã đạt giới hạn lượt gọi app",
+    "blockers_done": "Các công việc đang chờ đã xong"
   },
   "labels": {
     "set_status_to": "Đặt trạng thái thành",
@@ -130,7 +134,8 @@
     "failed_with_detail": "Thất bại: {{detail}}",
     "autopilot_quota_blocked": "Lần chạy bị chặn vì đã đạt giới hạn",
     "children_done_stage": "Các công việc con của giai đoạn {{stage}} đã hoàn thành",
-    "commented": "Đã bình luận"
+    "commented": "Đã bình luận",
+    "app_tool_calls_quota_blocked": "Agent không còn chạy được công cụ của app trong tháng này"
   },
   "toasts": {
     "source_context_retry_started": "Đã bắt đầu thử lại với ngữ cảnh gốc",
@@ -145,6 +150,8 @@
   },
   "kept": {
     "archived": "Đã lưu trữ",
+    "undo_archive": "Hoàn tác lưu trữ",
+    "unsubscribed": "Đã bỏ theo dõi",
     "leaves": "Rời Hộp thư đến khi bạn chuyển đi",
     "filtered": "Không còn khớp với bộ lọc của bạn",
     "next": "Tiếp theo",

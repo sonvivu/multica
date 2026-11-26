@@ -59,7 +59,8 @@
     "title": "Lịch sử",
     "current": "Hiện tại",
     "restore": "Khôi phục phiên bản này",
-    "loading": "Đang tải..."
+    "loading": "Đang tải...",
+    "from_discussion": "Từ bình luận: {{quote}}"
   },
   "not_found": {
     "title": "Không tìm thấy tài liệu",
@@ -96,6 +97,7 @@
       "save": "Không đăng được bình luận",
       "delete": "Không xóa được bình luận",
       "resolve": "Không cập nhật được bình luận"
-    }
+    },
+    "run_waiting_retry": "Đang chờ thử lại"
   }
 }
